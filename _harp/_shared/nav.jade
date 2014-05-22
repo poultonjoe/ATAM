@@ -1,0 +1,12 @@
+- var pages = [{slug: 'our-company', title: 'Our Company'}, {slug: 'services', title: 'Services'}, {slug: 'performance', title: 'Performance'}, {slug: 'contact', title: 'Contact'}]
+
+
+nav#main-navigation
+  ul
+    - each page in pages
+      if current.path[0] === page.slug
+        li.selected
+          a(href='/#{page.slug}/', title='#{page.title}')= page.title
+      else
+        li
+          a(href='/#{page.slug}/', title='#{page.title}')= page.title

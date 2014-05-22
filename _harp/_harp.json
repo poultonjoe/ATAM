@@ -1,0 +1,9 @@
+{
+  "globals": {
+    "site_title": "AT Asset Management",
+    "google_analytics": {
+      "id": "XX-XXXXX-XX",
+      "profile": ""
+    }
+  }
+}
