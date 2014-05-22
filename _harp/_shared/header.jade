@@ -1,10 +1,15 @@
+- var isHomepage = current.path[0] === 'index'
+
 header(role='banner')#site-header
   #logo
-    a(href='/', title='AT Asset Management - Home') AT Asset Management - Home
+    a(href='/', title='AT Asset Management - Home') AT Asset Management
     
   != partial('nav')
 
   a.menu-button(href='#main-navigation', title='Toggle menu')
     span Toggle menu
 
-  
+  if isHomepage
+    #introduction
+      h1 Fixed income &amp; equities - The two things we know best
+      a(href='#content', title='Skip to content') Skip to content
