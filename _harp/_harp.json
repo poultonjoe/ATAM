@@ -4,6 +4,9 @@
     "google_analytics": {
       "id": "XX-XXXXX-XX",
       "profile": ""
+    },
+    "google_maps": {
+      "api_key": "ABQIAAAAtYdwpdzLIMC5Gtbc-Lj4IBSA74S4TU1FAl5y8GnTaWIsGCau_xTpPjPto30UfobSZId5ePXfTwKsvA"
     }
   }
 }
