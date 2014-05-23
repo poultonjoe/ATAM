@@ -1,15 +1,21 @@
-#map
-  iframe(width='100%', height='250', frameborder='0', style='border:0', src='https://www.google.com/maps/embed/v1/place?key=#{google_maps.api_key}&q=One+Raffles+Quay,+Singapore&center=1.28173,103.85215&zoom=15')
+extend ../_shared/layout
 
-address One Raffles Quay, North Tower, #25-42, Singapore 048583
-  ul.contact-details
-    li 
-      | T: 
-      a(href="tel:(+65) 6622 5535", title="Call us") (+65) 6622 5535
-    li
-      | F: (+65) 6396 4709
-    li
-      | E: 
-      a(href="mailto:info@atassetmanagement.com", title="Email us") info@atassetmanagement.com
+block content
+  #map
+    iframe(width='100%', height='250', frameborder='0', style='border:0', src='https://www.google.com/maps/embed/v1/place?key=#{google_maps.api_key}&q=One+Raffles+Quay,+Singapore&center=1.28173,103.85215&zoom=15')
+
+  address One Raffles Quay, North Tower, #25-42, Singapore 048583
+    ul.contact-details
+      li 
+        | T: 
+        a(href="tel:(+65) 6622 5535", title="Call us") (+65) 6622 5535
+      li
+        | F: (+65) 6396 4709
+      li
+        | E: 
+        a(href="mailto:info@atassetmanagement.com", title="Email us") info@atassetmanagement.com
 
 block scripts
+  script.
+    var body = document.getElementsByTagName('body')[0];
+    body.style.backgroundColor = "yellow";
