@@ -1,0 +1,232 @@
+// ==========================================================================
+// Global defaults
+// ==========================================================================
+
+@container-width: 800px;
+
+@default-color: #444;
+@main-color: #222;
+@secondary-color: #ccc;
+
+@text-direction:ltr;
+@float:left;
+@opposite-float:right;
+
+.calc-float(@text-direction) when (@text-direction = rtl) {
+	@float: right;
+	@opposite-float: left;
+}
+.calc-float(@text-direction);
+
+@small-padding: 15px;
+@large-padding: 30px;
+@small-margin: 20px;
+@large-margin: 40px;
+
+// ==========================================================================
+// Grid & media query defaults
+// ==========================================================================
+
+@columns: 12;
+@column-gutter: 30px;
+
+@small-screen: 768px; // tablet - landscape
+@medium-screen: 1024px; // desktop
+@large-screen: 1280px; // large desktop, tv, etc
+
+@small-query: ~"screen and (min-width: @{small-screen})";
+@medium-query: ~"screen and (min-width: @{medium-screen})";
+@large-query: ~"screen and (min-width: @{large-screen})";
+
+@output-grid-classes: false;
+
+@query-transition-property: all;
+@query-transition-duration: 0.3s;
+@query-transition-timing-function: linear;
+@query-transition: @query-transition-property, @query-transition-duration, @query-transition-timing-function;
+@animate-queries: true;
+
+@retina-query: ~"all and (-webkit-min-device-pixel-ratio: 1.5), all and (-moz-min-device-pixel-ratio: 1.5), all and (-o-min-device-pixel-ratio: 3/2), all and (min-device-pixel-ratio: 1.5)";
+
+// ==========================================================================
+// Typography defaults
+// ==========================================================================
+
+// Em Base for px to em conversions
+@em-base: 16;
+@rem-base: 16;
+
+// Default line-height
+@line-height: 1.5;
+//
+// Cannot use custom functions
+// in math operations
+// rem(50px) => ((50 / @rem-base) + 0rem)
+@box-line-height: ((50 / @rem-base) + 0rem);
+
+// Font sizes
+@h1-font-size: ((27 / @rem-base) + 0rem);
+@h2-font-size: ((21 / @rem-base) + 0rem);
+@h3-font-size: ((20 / @rem-base) + 0rem);
+@h4-font-size: ((16 / @rem-base) + 0rem);
+@h5-font-size: ((14 / @rem-base) + 0rem);
+@h6-font-size: ((12 / @rem-base) + 0rem);
+@body-font-size: ((16 / @rem-base) + 0rem);
+
+@body-font-family:'Merriweather', Georgia, serif;
+
+// Headers
+@header-font-family:'Open Sans', Arial, sans-serif;
+@header-font-weight:400;
+@header-font-color:@main-color;
+@header-margin-top:0.2em;
+@header-margin-bottom:0.5em;
+@sub-heading-font-color:lighten(@header-font-color, 50%);
+
+// Paragraphs
+@paragraph-font-family:@body-font-family;
+@paragraph-font-weight:normal;
+@paragraph-font-color:@default-color;
+@paragraph-margin-top:0;
+@paragraph-margin-bottom:1.5em;
+
+// Code
+@code-font-family: 'Courier New', Courier, mono;
+@code-font-weight: normal;
+@code-font-color: @secondary-color;
+
+// Rule
+@hr-border-width: 1px;
+@hr-border-style: solid;
+@hr-border-color: #939699;
+@hr-margin-top: 1.5em;
+@hr-margin-bottom: 1.5em;
+
+// Blockquote
+@blockquote-margin-top: 1.5em;
+@blockquote-margin-bottom: 1.5em;
+@blockquote-font-color: @default-color;
+
+// Links
+@link-color: @default-color;
+
+// ==========================================================================
+// Decorative styles
+// ==========================================================================
+
+@border-radius: 2px;
+
+// ==========================================================================
+// Form styles
+// ==========================================================================
+
+@form-border-color:#939699;
+
+@small-form-height:50px;
+@large-form-height:40px;
+
+// ==========================================================================
+// Badges styles
+// ==========================================================================
+
+@output-badge-classes: false;
+
+@default-badge-font-size: 0.6125rem;
+
+@default-badge-background-color: #f2f4f6;
+@default-badge-color: @main-color;
+
+@new-badge-background-color: #f2f4f6;
+@new-badge-color: #009446;
+
+@featured-badge-background-color: #fff7eb;
+@featured-badge-color: #ff4f01;
+
+@ending-badge-background-color: #f2f4f6;
+@ending-badge-color: #a13137;
+
+// ==========================================================================
+// Button styles
+// ==========================================================================
+
+@output-button-classes: false;
+
+@small-button-height:50px;
+@small-button-font-size:20px;
+@large-button-height:40px;
+@large-button-font-size:17px;
+
+@default-button-font-family: 'Noto Sans', Helvetica, Arial, sans-serif;
+@default-button-font-size: @h1-font-size;
+
+@main-button-background-color: @main-color;
+@main-button-border-color: transparent;
+@main-button-color: #fff;
+
+@secondary-button-background-color: @secondary-color;
+@secondary-button-border-color: transparent;
+@secondary-button-color: #fff;
+
+@tertiary-button-background-color: #fff;
+@tertiary-button-border-color: #599ad1;
+@tertiary-button-color: @link-color;
+
+@inactive-button-background-color: #f0f6fa;
+@inactive-button-border-color: #c2d4e1;
+@inactive-button-color: #c4c4c4;
+
+
+// ==========================================================================
+// Alert & tooltip styles
+// ==========================================================================
+
+@output-alert-classes: false;
+
+// Green success, ajax etc
+@success-color:#4f8a10;
+@success-background-color:#f3ffde;
+@success-border-color:#4f8a10;
+
+// Yellow info
+@info-color:@default-color;
+@info-background-color:#ffffcb;
+@info-border-color:#adc9e1;
+
+// Pink error/validation
+@error-color: #ed0043;
+@error-background-color: #fff3f6;
+@error-border-color: @error-color;
+
+
+// ==========================================================================
+// Layout styles (table layouts)
+// ==========================================================================
+
+@output-layout-classes: false;
+
+
+// ==========================================================================
+// Block list styles
+// ==========================================================================
+
+@output-block-list-classes: false;
+
+@block-list-block-border-colour: #47a5f4;
+@block-list-border-colour:@form-border-color;
+@block-list-text-colour: #0066cc;
+@block-list-text-disable-colour: #c4c4c4;
+@block-list-text-highlight-colour: #ffffff;
+@block-list-background-colour: #ffffff;
+@block-list-background-highlight-colour: #47a5f4;
+@block-list-background-active-colour: #f0f6fa;
+
+
+// ==========================================================================
+// Pagination styles
+// ==========================================================================
+
+@output-pagination-classes:false;
+
+@pagination-border-color:@form-border-color;
+@pagination-disabled-color:#c4c4c4;
+@pagination-selected-background-color:#f0f6fa;

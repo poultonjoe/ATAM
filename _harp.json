@@ -1,0 +1,12 @@
+{
+  "globals": {
+    "site_title": "AT Asset Management",
+    "google_analytics": {
+      "id": "UA-51283341-1",
+      "profile": "atassetmanagement.com"
+    },
+    "google_maps": {
+      "api_key": "AIzaSyDU5X-cxS9nHBzG5v755X9OdNxHI0I1WzE"
+    }
+  }
+}

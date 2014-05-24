@@ -1,0 +1,9 @@
+- var data = current.path[0] !== 'zh' ? public._data.navigation : public.zh._data.navigation
+
+nav#main-navigation
+  ul
+    - each title, slug in data
+      if current.path[0] === slug
+        li.selected: a(href='/#{slug}/', title='#{title}')= title
+      else
+        li: a(href='/#{slug}/', title='#{title}')= title
