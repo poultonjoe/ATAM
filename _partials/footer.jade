@@ -1,4 +1,9 @@
-year = (new Date()).getFullYear()
+- var lang = current.path[0] === 'zh' ? 'zh' : '';
+- var data = lang !== 'zh' ? public._data : public.zh._data;
+- var navigation = data.navigation;
+- each title, slug in data.footer_navigation
+  - navigation[slug] = title
+- var year = (new Date()).getFullYear();
 
 footer#site-footer(role='contentinfo')
   div.info
@@ -6,17 +11,8 @@ footer#site-footer(role='contentinfo')
     div.copyright AT Asset Management &copy; #{year}.
     div.registration Registration Number 201212588D.
 
-  nav
-    ul.footer-navigation
-      li
-        a(href='/our-company', title='Our Company') Our Company
-      li
-        a(href='/services', title='Services') Services
-      li
-        a(href='/performance', title='Performance') Performance
-      li
-        a(href='/contact', title='Contact') Contact
-      li
-        a(href='/sitemap', title='Sitemap') Sitemap
-      li
-        a(href='/disclaimer', title='Disclaimer') Disclaimer
+  nav.footer-navigation
+    ul
+      - each title, slug in navigation
+        - var href = lang + '/' + slug
+        li: a(href='/#{href}/', title='#{title}')= title

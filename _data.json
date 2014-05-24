@@ -4,5 +4,8 @@
     "services": "Services",
     "performance": "Performance",
     "contact": "Contact"
+  },
+  "footer_navigation": {
+    "disclaimer": "Disclaimer"
   }
 }

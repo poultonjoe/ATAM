@@ -1,7 +1,9 @@
-- var isHomepage = current.path[0] === 'index'
+- var lang = current.path[0] === 'zh' ? 'zh' : 'en';
+- var isHome = current.path[0] === 'index' || lang === 'zh' && current.path[1] === 'index';
+- var className = isHome ? 'home' : (lang === 'en' ? current.path[0] : current.path[1])
 
 doctype
-html(class='#{isHomepage ? "homepage" : current.path[0]}')
+html(lang='#{lang}', class='#{className}')
   head
     meta(charset='utf-8')
     meta(name='viewport', content='width=device-width, initial-scale=1.0, maximum-scale=1.0')

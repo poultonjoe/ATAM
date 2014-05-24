@@ -1,8 +1,11 @@
 {
   "navigation": {
-    "our-company-zh": "Our company zh",
-    "services-zh": "Services zh",
-    "performance-zh": "Performance zh",
-    "contact-zh": "Contact zh"
+    "our-company": "关于我们",
+    "services": "我们的服务",
+    "performance": "投资表现",
+    "contact": "与我们联系"
+  },
+  "footer_navigation": {
+    "disclaimer": "免责声明"
   }
 }

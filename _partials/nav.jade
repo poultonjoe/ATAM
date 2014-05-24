@@ -1,9 +1,13 @@
-- var data = current.path[0] !== 'zh' ? public._data.navigation : public.zh._data.navigation
+- var lang = current.path[0] === 'zh' ? 'zh' : '';
+- var navigation = lang !== 'zh' ? public._data.navigation : public.zh._data.navigation
+
 
 nav#main-navigation
   ul
-    - each title, slug in data
-      if current.path[0] === slug
-        li.selected: a(href='/#{slug}/', title='#{title}')= title
+    - each title, slug in navigation
+      - var href = lang + '/' + slug
+      - var path = lang ? current.path[1] : current.path[0]
+      if path === slug
+        li.selected: a(href='/#{href}/', title='#{title}')= title
       else
-        li: a(href='/#{slug}/', title='#{title}')= title
+        li: a(href='/#{href}/', title='#{title}')= title
