@@ -1,21 +1,22 @@
-Welcome
+# Welcome
 
 Before proceeding, please read and agree to the disclaimer below.
-DISCLAIMER
 
-Prior
+### DISCLAIMER
+
+#### Prior
 
 A reference to "Website" shall mean the website located at http://www.atassetmanagement.com and all web pages thereunder, including the content, information, applications, programs, images, sounds, graphics, video and other materials displayed therein and the functionalities or services provided therein.
 
 Please read this page before proceeding, as it explains certain restrictions imposed by law on the distribution of this information and the countries in which our funds are authorised for sale. It is your responsibility to be aware of and to observe all applicable laws and regulations of any relevant jurisdiction
 
-Restricted
+#### Restricted
 
 This Site, the Content and the Investment Products are not directed at or intended for distribution to any person (or entity) who is a citizen or resident of (or located or established in) any jurisdiction where the use of the Site (or the purchase or sale of the Investment Products) would be contrary to applicable law or regulation or would subject AT Asset Management Pte. Ltd. (“AT Asset Management”) to any registration or licensing requirement in such jurisdiction. Persons who wish to access this Site are required by AT Asset Management to inform themselves about and to observe any legal or regulatory restrictions that may affect their eligibility to access the Site or to subscribe for interests in the Investment Products. Professional advice should be sought in cases of doubt.
 
 Only "Eligible Investors" as defined in our Fund's relevant offering materials may subscribe for or hold Participating Shares in the Investment Products. Eligible Investors must also satisfy the requirements for an "Accredited Investor" under the definition of the Securities and Futures Act (Chapter 289) of Singapore (SFA). Before investing in the Fund, potential investors are requested to refer to relevant offering materials to determine if they satisfy the requirements for Eligible Investors and for Accredited Investors.
 
-No Offer
+#### No Offer
 
 The information contained on this website is intended for your general information only and must not be construed as an offer or solicitation of an offer to buy or sell any shares in any of our funds or a recommendation to invest in any of our products and neither does it take into account your particular circumstances or have regard to your specific investment objectives, financial situation or any of your particular needs.
 
@@ -27,26 +28,26 @@ The prospectus of the funds is available on the Website or from AT Asset Managem
 
 As a result of money laundering regulations, additional documentation for identification purposes may be required when you make your investment. Details are contained in the Singapore prospectus or other constitutional document. If you are unsure about the meaning of any information provided please consult your financial or other professional adviser.
 
-No Warranty
+#### No Warranty
 
 AT Asset Management has taken reasonable care to ensure that all the information contained on this website is accurate, secure and up to date, but no representations or warranties are given as to the reliability, accuracy and completeness of the information. The information contained on this website is subject to change without notice. As a result, you should check the accuracy of such information before relying on it. AT Asset Management accepts no liability for any damage or loss, including loss of profit, whether direct, indirect or consequential in respect of the use of this website or its contents or any subsequent subscription into an AT Asset Management fund and whether arising as a result of AT Asset Management’s negligence or otherwise.
 AT Asset Management shall have no liability (whether in contract, tort or otherwise) for any direct, indirect, consequential or special losses or damages of any kind whatsoever arising from or in connection with the access to, use of or linking to other websites (“Linked Websites”) from this Site or any reliance on any of the Content. AT Asset Management is not responsible for the content of any Linked Websites and accordingly accepts no liability with respect thereto or for any reliance placed upon such Linked Websites. AT Asset Management is not liable for persons or matters beyond its reasonable control (such as telephone and other communications networks, the internet or your internet service provider). These exclusions of liability do not apply to the extent that such exclusions are invalid or ineffective under any law or regulation applicable to AT Asset Management.
 
-No Reliance
+#### No Reliance
 
 The information contained on this site is published in good faith and provided on an "as is" and "as available" basis for informational purposes only. No representation or warranty, express or implied, is therefore made by AT Asset Management or by any person as to its accuracy, adequacy, timeliness, commercial value or completeness, or that any of the information or our Website will be provided uninterrupted or free of errors or that any identified defect will be corrected, and it should not be relied on as such by you. AT Asset Management shall have no liability for any loss or damage arising out of the use of or reliance on the information provided including without limitation, any loss of profit or direct, indirect, incidental, special, punitive or consequential or any other damage whatsoever, even if AT Asset Management or its agents have been advised of the possibility of such loss of profit or damages. No information on this site constitutes investment, tax, legal or any other advice. Past performance of a fund or its manager is not necessarily indicative of the future performance of the fund or its manager. The value of shares in the funds and the income accruing to the shares, if any, may fall or rise and are not guaranteed. Rates of exchange may cause the value of investments to go up or down. Investors may not get back the amount they invest. Fluctuation may be particularly marked in the case of a higher volatility fund and the value of an investment may fall suddenly and substantially. Individual stock price/figure does not represent the return of the fund. The funds may use financial derivative instruments for efficient portfolio management or to hedge market and currency risk – please refer to the Singapore prospectus of the funds for more information.
 
-Trademarks and Copyrights
+#### Trademarks and Copyrights
 
 The intellectual property rights in this Website and the information contained herein are owned, licensed to or controlled by AT Asset Management, its licensors or service providers. AT Asset Management aggressively enforces its intellectual property rights to the fullest extent of the law. No part or parts of this Website or any of its information may be reproduced, distributed, republished, displayed, broadcast, hyperlinked, mirrored, framed, transferred, transmitted or copied in whole or in part, or in any manner or by any means or stored in an information retrieval system without the prior written permission of AT Asset Management or other copyright owners. Permission will only be granted to you to download, print or use the information for personal, non-commercial uses, provided that you do not modify the information and that you retain all copyright and other proprietary notices contained in the information.
 The trade marks, service marks, trade names and logos used and displayed on this Website (collectively the "Trade Marks") are registered and unregistered trade marks of AT Asset Management and others. Nothing on this Website should be construed as granting, by implication, estoppel, or otherwise, any license or right to use any Trade Marks displayed on this Website, without the written permission of AT Asset Management or any other applicable trade mark owner. The name of AT Asset Management may not be used in any way without the prior written permission of AT Asset Management.
 
-Miscellaneous
+#### Miscellaneous
 
 You should be aware that your dealings with any AT Asset Management entity are not covered by the rules and/or regulations made for the protection of investors in your country of legal residence, including any compensation arrangements, complaints process or rights of cancellation under the rules of the Financial Services Authority of your country. Similar protections may be available under the rules and regulations applicable in the jurisdiction in which business is conducted but you must make your own investigation of such matters.
 You should be aware that any rules and/or regulations applicable to the provision of financial services (and the resultant investor protection benefits that may be available), may not be applicable to interfacing conducted through the internet medium and its various applications, of which this material forms part.
 The views expressed herein do not necessarily reflect the views of the AT Asset Management as a whole or any part thereof, nor do they constitute investment or any other advice. Any research found on these pages has been procured and may have been acted on by the AT Asset Management for its own purposes.
 
-Proceed
+#### Proceed
 
 To Proceed, please click on the agree button below. By clicking the agree button, it means that you have read, understood and agreed to be bound by the terms and conditions above.
