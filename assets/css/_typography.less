@@ -76,12 +76,6 @@ p, pre{
 	margin-bottom: @paragraph-margin-bottom;
 }
 
-code {
-	font-family: @code-font-family;
-	font-weight: @code-font-weight;
-	color: @code-font-color;
-}
-
 blockquote {
 	font-size: @body-font-size;
 	font-style: italic;
@@ -105,20 +99,15 @@ blockquote {
 
 a{
 	color: @link-color;
-	font-weight:bold;
 	text-decoration:none;
 	display: inline-block;
 	.transition(color .5s ease-in, border-color .5s ease-in);
 
 	&:hover{
-		color:@main-color;
+		color:@secondary-color;
 	}
 
 	p & {
-		border-bottom:1px solid @secondary-color;
-
-		&:hover{
-			border-bottom-color:@main-color;
-		}
+		text-decoration:underline;
 	}
 }

@@ -1,6 +1,6 @@
 - var lang = current.path[0] === 'zh' ? 'zh' : 'en';
 - var isHome = current.path[0] === 'index' || lang === 'zh' && current.path[1] === 'index';
-- var className = isHome ? 'home' : (lang === 'en' ? current.path[0] : current.path[1])
+- var className = isHome ? 'home' : (lang === 'en' ? current.path[0] : current.path[1]);
 
 doctype
 html(lang='#{lang}', class='#{className}')

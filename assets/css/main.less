@@ -16,10 +16,13 @@ body{
 // ==========================================================================
 
 #site-header{
+  //height:110px;
+  .box-sizing(border-box);
   .clearfix;
   font-family:@header-font-family;
-  padding:@small-margin;
+  padding:33px @small-padding;
   .fadein;
+  background:#efeee9;
 
   #logo{
     float:left;
@@ -27,10 +30,12 @@ body{
     a{
       text-indent:-999em;
       display:block;
-      width:40px;
-      height:40px;
-      background:url(../img/logo.svg) 0 0 no-repeat;
-      background-size:40px 40px;
+      width:176px;
+      height:44px;
+      //background:url(../img/logo.svg) 0 0 no-repeat;
+      //background-size:40px 40px;
+      background:#333;
+
       text-indent:999em;
       overflow:hidden;
       font-size:0;
@@ -92,7 +97,6 @@ body{
   #main-navigation{
     display:block;
     background:@main-color;
-    margin:-@small-margin -@small-margin @small-margin;
     max-height:0;
     height:auto;
     overflow:hidden;
@@ -102,18 +106,18 @@ body{
       margin:0;
       padding:@small-margin;
       list-style:none;
+      .clearfix;
 
       li{
-        margin:0 0 @small-margin/2;
+        margin:0 @small-margin 0 0;
         
         &:last-child{
           margin:0;
         }
 
         a{
-          color:darken(#fff, 10%);
-          border:0;
-          font-weight:600;
+          text-transform:uppercase;
+          font-size:@h4-font-size;
         }
 
         &.selected a,
@@ -127,7 +131,7 @@ body{
     @media screen and (max-width:(@small-screen - 1)) {
       &:target,
       .menu-visible & {
-        max-height:200px!important;
+        max-height:44px!important;
       }
     }
 
@@ -144,14 +148,8 @@ body{
 
         li{
           float:left;
-          margin-right:@large-margin;
-          line-height:40px;
-
-          a{
-            color:@secondary-color;
-            border:0;
-            font-weight:600;
-          }
+          line-height:44px;
+          height:44px;
 
           &:last-child{
             margin:0;
@@ -159,7 +157,7 @@ body{
 
           &.selected a,
           a:hover{
-            color:@main-color;
+            color:@secondary-color;
           }
         }
       }
@@ -172,13 +170,63 @@ body{
   width:auto;
   max-width:@container-width;
   margin:0 auto;
-  padding:@small-padding;
+  padding:@large-margin @small-padding @small-padding;
   .fadein;
 }
 
 #site-footer{
-  border-top:1px solid #f4f4f4;
+  .box-sizing(border-box);
+  height:60px;
+  width:100%;
+  padding:12px @small-padding;
+  background:#000;
+  color:#fff;
+  font-size:@h4-font-size;
   .fadein;
+  &:extend(.clearfix all);
+
+  .info{
+    float:left;
+    width:50%;
+
+    img{
+      height:36px;
+      width:36px;
+      float:left;
+      margin:0 @small-margin/2 0 0;
+    }
+  }
+  .footer-navigation{
+    float:right;
+    width:50%;
+    text-align:right;
+
+    ul{
+      margin:0;
+      padding:0;
+      list-style:none;
+
+      li{
+        display:inline-block;
+        margin:0 0 0 5px;
+        padding:0 0 0 5px;
+        border-left:1px solid #fff;
+
+        &:first-child{
+          border:0;
+        }
+
+        &:last-child{
+          display:block;
+          border:0;
+        }
+
+        a{
+          color:#fff;
+        }
+      }
+    }
+  }
 
   p{
     .box-sizing(border-box);
@@ -190,185 +238,97 @@ body{
   }
 }
 
-
 // ==========================================================================
-// Intro
+// Home
 // ==========================================================================
 
-#site-intro{
-  font-size:@h2-font-size;
-  text-align:center;
+.home{
 
-  .avatar{
+  #site-header{
+    height:682px;
+  }
+
+  #introduction{
+    text-transform:uppercase;
+    text-align:center;
+    clear:both;
+    margin-top:180px;
+  }
+
+  #skip-to-content{
+    margin:300px auto 0;
+    height:46px;
+    width:46px;
     display:block;
-    //border-radius:50%;
-    margin:0 auto @large-margin;
-    max-width:auto;
-    height:auto;
-  }
-}
-
-
-// ==========================================================================
-// Projects
-// ==========================================================================
-
-.project{
-  padding-bottom:@small-padding;
-  border-bottom:1px solid lighten(@secondary-color, 15%);
-  margin-bottom:@large-margin;
-
-  &:hover{
-    //margin:0 0 @large-margin -20px;
-    //border-left:3px solid @secondary-color;
-    //padding:0 0 0 17px;
+    text-indent:-999em;
+    background:#333;
   }
 
-  &:last-child{
-    border:0;
-    padding:0;
-  }
+  #content{
+    text-align:center;
 
-  img{
-    max-width:100%;
-  }
-
-  dl{
-    dt{
-      font-weight:bold;
-      display:inline-block;
-      margin-right:10px;
+    h1,
+    h2{
+      text-transform:uppercase;
     }
-    dd{
-      margin:0;
-      display:inline-block;
+
+    section{
+      border-bottom:1px solid @default-color;
+      margin:0 0 @large-margin;
+      padding:0 0 @large-margin;
+
+      &:last-child{
+        border:0;
+        padding:0;
+      }
     }
-  }
-}
 
-
-.no-touch .projects > .project > * {
-  opacity:1;
-  .transition(opacity 0.2s linear);
-}
-
-.no-touch .projects:hover > .project > * {
-  opacity:0.2;
-}
-
-.no-touch .projects:hover > .project:hover > * {
-  opacity:1;
-}
-
-// ==========================================================================
-// Blog
-// ==========================================================================
-
-figure{
-  width:100%;
-  position:relative;
-  text-align:center;
-  margin-bottom:@small-margin;
-
-  img{
-    width:100%;
-    height:auto;
-  }
-
-  figcaption{
-    width:200px;
-    position:absolute;
-    top:0;
-    left:-200px;
-    padding:@small-padding @small-padding 0 0;
-    text-align:right;
-    font-size:@h6-font-size;
-    font-style:italic;
-    color:@secondary-color;
-    box-sizing:border-box;
-
-    &:before{
-      content:'';
-      width:25%;
-      position:absolute;
-      top:0;
-      right:@small-padding;
-      background:@secondary-color;
-      height:1px;
-      display:block;
-    }
-  }
-}
-
-.post{
-  header{
-    margin-bottom:@small-margin;
-
-    h1{
+    p:last-child{
       margin:0;
     }
 
-    .metadata{
-      color:@secondary-color;
-      font-size:0.875em;
+    a{
+      font-style:italic;
     }
   }
 }
 
-.no-touch .posts > .post > * {
-  opacity:1;
-  .transition(opacity 0.2s linear);
-}
-
-.no-touch .posts:hover > .post > * {
-  opacity:0.2;
-}
-
-.no-touch .posts:hover > .post:hover > * {
-  opacity:1;
-}
-
 // ==========================================================================
-// Resume
+// Contact
 // ==========================================================================
 
-article{
-  margin-bottom:@large-margin;
+.contact{
+  address{
+    text-align:center;
+    font-style:normal;
 
-  &.skills{
     ul{
-      list-style:none;
       margin:0;
       padding:0;
-    }
-  }
+      list-style:none;
 
-  dl{
-    margin-bottom:0;
-    &:extend(.clearfix all);
-    
-    dd{
-      margin:0;
-    }
+      li{
+        display:inline-block;
+        margin-right:5px;
+        padding-right:5px;
+        border-right:1px solid @default-color;
 
-    dt{
-      font-weight:bold;
-      margin-right:5px;
-      float:left;
-    }
-  }
+        &:last-child{
+          margon:0;
+          padding:0;
+          border:0;
+        }
 
-  .job{
-    margin-bottom:@small-margin;
-    
-    h3,
-    h4,
-    .date{
-      font:bold 1em/1.5 @body-font-family;
-      margin:0;
+        a,
+        a:hover{
+          color:@default-color;
+          text-decoration:none;
+        }
+      }
     }
   }
 }
+
 
 // ==========================================================================
 // Animations

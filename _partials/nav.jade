@@ -5,7 +5,7 @@
 nav#main-navigation
   ul
     - each title, slug in navigation
-      - var href = lang + '/' + slug
+      - var href = (lang ? lang + '/' : '') + slug
       - var path = lang ? current.path[1] : current.path[0]
       if path === slug
         li.selected: a(href='/#{href}/', title='#{title}')= title

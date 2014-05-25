@@ -14,5 +14,5 @@ footer#site-footer(role='contentinfo')
   nav.footer-navigation
     ul
       - each title, slug in navigation
-        - var href = lang + '/' + slug
+        - var href = (lang ? lang + '/' : '') + slug
         li: a(href='/#{href}/', title='#{title}')= title

@@ -2,11 +2,11 @@
 // Global defaults
 // ==========================================================================
 
-@container-width: 800px;
+@container-width: 960px;
 
-@default-color: #444;
-@main-color: #222;
-@secondary-color: #ccc;
+@default-color: #6b6e70;
+@main-color: #17457b;
+@secondary-color: #4ead75;
 
 @text-direction:ltr;
 @float:left;
@@ -65,20 +65,20 @@
 @box-line-height: ((50 / @rem-base) + 0rem);
 
 // Font sizes
-@h1-font-size: ((27 / @rem-base) + 0rem);
-@h2-font-size: ((21 / @rem-base) + 0rem);
-@h3-font-size: ((20 / @rem-base) + 0rem);
-@h4-font-size: ((16 / @rem-base) + 0rem);
-@h5-font-size: ((14 / @rem-base) + 0rem);
-@h6-font-size: ((12 / @rem-base) + 0rem);
-@body-font-size: ((16 / @rem-base) + 0rem);
+@h1-font-size: ((21 / @rem-base) + 0rem);
+@h2-font-size: ((18 / @rem-base) + 0rem);
+@h3-font-size: ((14 / @rem-base) + 0rem);
+@h4-font-size: ((12 / @rem-base) + 0rem);
+@h5-font-size: ((11 / @rem-base) + 0rem);
+@h6-font-size: ((10 / @rem-base) + 0rem);
+@body-font-size: ((12 / @rem-base) + 0rem);
 
-@body-font-family:'Merriweather', Georgia, serif;
+@body-font-family:'Source Sans Pro', Arial, serif;
 
 // Headers
-@header-font-family:'Open Sans', Arial, sans-serif;
+@header-font-family:'Source Sans Pro', Arial, sans-serif;
 @header-font-weight:400;
-@header-font-color:@main-color;
+@header-font-color:@default-color;
 @header-margin-top:0.2em;
 @header-margin-bottom:0.5em;
 @sub-heading-font-color:lighten(@header-font-color, 50%);
@@ -89,11 +89,6 @@
 @paragraph-font-color:@default-color;
 @paragraph-margin-top:0;
 @paragraph-margin-bottom:1.5em;
-
-// Code
-@code-font-family: 'Courier New', Courier, mono;
-@code-font-weight: normal;
-@code-font-color: @secondary-color;
 
 // Rule
 @hr-border-width: 1px;
@@ -108,7 +103,7 @@
 @blockquote-font-color: @default-color;
 
 // Links
-@link-color: @default-color;
+@link-color: @main-color;
 
 // ==========================================================================
 // Decorative styles
