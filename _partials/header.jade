@@ -1,8 +1,10 @@
-- var isHomepage = current.path[0] === 'index'
+- var lang = current.path[0] === 'zh' ? 'zh' : 'en';
+- var home = lang === 'en' ? current.path[0] === 'index' : current.path[1] === 'index';
+- var logo = lang === 'en' ? 'icon-ATAM_logo' : 'icon-ATAM_chinese_logo';
 
 header(role='banner')#site-header
   #logo
-    a(href='/', title='AT Asset Management - Home') AT Asset Management
+    a(href='/', title='AT Asset Management - Home', class='#{logo}') AT Asset Management
     
   != partial('nav')
 
