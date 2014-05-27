@@ -283,6 +283,7 @@ body{
     h1,
     h2{
       text-transform:uppercase;
+      letter-spacing:2px;
     }
 
     section{
@@ -290,9 +291,41 @@ body{
       margin:0 0 @large-margin;
       padding:0 0 @large-margin;
 
+      h2{
+        position:relative;
+        padding-top:45px;
+
+        &:before{
+          content:'';
+          display:block;
+          width:32px;
+          height:32px;
+          position:absolute;
+          top:0;
+          left:50%;
+          margin-left:-16px;
+        }
+      }
+
       &:last-child{
         border:0;
         padding:0;
+      }
+
+      &.our-company{
+        h2:before{
+          .icon-company;
+        }
+      }
+      &.services{
+        h2:before{
+          .icon-services;
+        }
+      }
+      &.performance{
+        h2:before{
+          .icon-performance;
+        }
       }
     }
 
