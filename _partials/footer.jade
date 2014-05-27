@@ -6,12 +6,13 @@
 - var year = (new Date()).getFullYear();
 
 footer#site-footer(role='contentinfo')
-  div.info
-    div.copyright AT Asset Management &copy; #{year}.
-    div.registration Registration Number 201212588D.
+  .wrap
+    div.info
+      div.copyright AT Asset Management &copy; #{year}.
+      div.registration Registration Number 201212588D.
 
-  nav.footer-navigation
-    ul
-      - each title, slug in navigation
-        - var href = (lang ? lang + '/' : '') + slug
-        li: a(href='/#{href}/', title='#{title}')= title
+    nav.footer-navigation
+      ul
+        - each title, slug in navigation
+          - var href = (lang ? lang + '/' : '') + slug
+          li: a(href='/#{href}/', title='#{title}')= title
