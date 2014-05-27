@@ -1,6 +1,8 @@
 - var lang = current.path[0] === 'zh' ? 'zh' : 'en';
 - var isHome = current.path[0] === 'index' || lang === 'zh' && current.path[1] === 'index';
 - var className = isHome ? 'home' : (lang === 'en' ? current.path[0] : current.path[1]);
+- var baseUrl = environment === 'development' ? '' : '/ATAM';
+
 
 doctype
 html(lang='#{lang}', class='#{className}')
@@ -8,8 +10,8 @@ html(lang='#{lang}', class='#{className}')
     meta(charset='utf-8')
     meta(name='viewport', content='width=device-width, initial-scale=1.0, maximum-scale=1.0')
     title= locals.title ? title + " | " + site_title : site_title
-    link(rel='shortcut icon', href='/assets/img/favicon.ico')
-    link(rel="stylesheet", href="../assets/css/main.css")
+    link(rel='shortcut icon', href='#{baseUrl}/assets/img/favicon.ico')
+    link(rel="stylesheet", href="#{baseUrl}/assets/css/main.css")
   body
     != partial('/_partials/header')
     block header
