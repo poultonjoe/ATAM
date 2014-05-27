@@ -1,5 +1,6 @@
 @import "_normalize";
 @import "_typography";
+@import "_sprite";
 @import "_variables";
 @import "_mixins";
 
@@ -32,10 +33,12 @@ body{
       display:block;
       width:176px;
       height:44px;
-
-      text-indent:999em;
       overflow:hidden;
-      font-size:0;
+      .logo;
+
+      &.zh{
+        .logo-chinese;
+      }
     }
   }
 
@@ -55,7 +58,7 @@ body{
       height:4px;
       width:30px;
       left:5px;
-      background:@main-color;
+      background:@default-color;
       position:absolute;
       display:block;
       .transition(all 0.3s ease-in-out);
@@ -77,11 +80,11 @@ body{
 
         &:before{
           top:0;
-          transform:rotate(-45deg);
+          .transform(rotate(-45deg));
         }
         &:after{
           top:0;
-          transform:rotate(45deg);
+          .transform(rotate(45deg));
         }
       }
     }
@@ -93,11 +96,12 @@ body{
 
   #main-navigation{
     display:block;
-    background:@main-color;
+    background:@default-color;
     max-height:0;
     height:auto;
     overflow:hidden;
     .transition(max-height .5s);
+    margin:-33px -@small-padding 33px;
 
     ul{
       margin:0;
@@ -115,12 +119,12 @@ body{
         a{
           text-transform:uppercase;
           font-size:@h4-font-size;
+          color:#fff;
         }
 
         &.selected a,
         a:hover{
-          color:#fff;
-          //text-decoration:underline;
+          color:@secondary-color;
         }
       }
     }
@@ -128,7 +132,7 @@ body{
     @media screen and (max-width:(@small-screen - 1)) {
       &:target,
       .menu-visible & {
-        max-height:44px!important;
+        max-height:300px!important;
       }
     }
 
@@ -155,6 +159,10 @@ body{
           &.selected a,
           a:hover{
             color:@secondary-color;
+          }
+
+          a{
+            color:@link-color;
           }
         }
       }
@@ -187,6 +195,19 @@ body{
     width:50%;
     padding-left:46px;
     .box-sizing(border-box);
+    position:relative;
+
+    &:before{
+      content:'';
+      display:block;
+      width:36px;
+      height:36px;
+      .logo-monogram;
+      position:absolute;
+      top:0;
+      left:0;
+    }
+
   }
   .footer-navigation{
     float:right;
