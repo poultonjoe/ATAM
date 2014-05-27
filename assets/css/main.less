@@ -10,6 +10,19 @@ body{
   color:@default-color;
   margin:0;
   font-size:100%;
+
+  // Flexbox
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  
+  -webkit-box-orient: vertical;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  
+  min-height: 100vh;
 }
 
 // ==========================================================================
@@ -194,6 +207,12 @@ body{
   margin:0 auto;
   padding:@large-margin @small-padding @small-padding;
   .fadein;
+
+  // Flexbox
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
 }
 
 #site-footer{
@@ -384,10 +403,7 @@ body{
   #content{
     h1,
     h2{
-      text-transform:uppercase;
-      letter-spacing:2px;
-      text-align:center;
-      margin-top:0;
+      .title;
     }
 
     section{
@@ -506,10 +522,196 @@ body{
 }
 
 // ==========================================================================
+// Services
+// ==========================================================================
+
+.services{
+
+  h1{
+    position:relative;
+    padding-top:45px;
+
+    &:before{
+      content:'';
+      display:block;
+      width:32px;
+      height:32px;
+      position:absolute;
+      top:0;
+      left:50%;
+      margin-left:-16px;
+      .icon-company;
+    }
+  }
+
+  #content{
+    h1,
+    h2{
+      .title;
+    }
+
+    section{
+      margin:0 0 @large-margin;
+      padding:0 0 @large-margin;
+
+      &.introduction{
+        @media @small-query{
+          text-align:center;
+        }
+      }
+      &.philosophy{
+        @media @small-query{
+          //text-align:center;
+          float:left;
+          width:45%;
+        }
+      }
+      &.principles{
+        @media @small-query{
+          //text-align:center;
+          float:right;
+          width:45%;
+        }
+      }
+      &.management-team{
+        .team-member{
+          .clearfix;
+          margin-bottom:@large-margin;
+
+          .profile{
+            text-align:center;
+            margin:0 0 1em;
+
+            img{
+              width:auto;
+              height:100%;
+
+              @media @small-query{
+                height:56px;
+              }
+            }
+
+            strong{
+              display:block;
+            }
+
+            @media @small-query{
+              float:left;
+              width:150px;
+              margin-right:@small-padding;
+              text-align:left;
+            }
+          }
+
+          @media @small-query{
+          }
+        }
+      }
+    }
+
+    blockquote{
+      clear:both;
+      .clearfix;
+      font-style:italic;
+      font-size:1.25rem;
+      letter-spacing:5px;
+      border:0;
+      position:relative;
+      padding:0 @small-padding * 2 3em * 0.7;
+
+      cite{
+        color:@default-color;
+        letter-spacing:0;
+        text-align:right;
+        position:absolute;
+        bottom:0;
+        right:@small-padding;
+
+        strong{
+          display:block;
+        }
+
+        &:before{
+          content:none;
+        }        
+
+        @media @small-query{
+          right:15%;
+        }
+      }
+
+      &:before,
+      &:after{
+        display:inline-block;
+        font-size:2em;
+        color:@secondary-color;
+        line-height:0.5;
+        position:relative;
+        top:0.25em;
+      }
+
+      &:before{
+        content:'\201C';
+        margin-left:-.75em;
+      }
+      &:after{
+        content:'\201D';
+      }
+
+      @media @small-query{
+        padding:0 15% 3em * 0.7;
+      }
+    }
+  }
+}
+
+// ==========================================================================
+// Performance
+// ==========================================================================
+
+.performance{
+
+  h1{
+    .title;
+    position:relative;
+    padding-top:45px;
+
+    &:before{
+      content:'';
+      display:block;
+      width:32px;
+      height:32px;
+      position:absolute;
+      top:0;
+      left:50%;
+      margin-left:-16px;
+      .icon-performance;
+    }
+  }
+
+  #content{
+    section{
+      margin:0 0 @large-margin;
+      padding:0 0 @large-margin;
+
+      &.introduction{
+        @media @small-query{
+          text-align:center;
+        }
+      }
+    }
+  }
+}
+
+// ==========================================================================
 // Contact
 // ==========================================================================
 
 .contact{
+  #map{
+    margin-bottom:@small-margin;
+  }
+
   address{
     text-align:center;
     font-style:normal;
