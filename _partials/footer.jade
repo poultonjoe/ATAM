@@ -1,8 +1,6 @@
 - var lang = current.path[0] === 'zh' ? 'zh' : '';
 - var data = lang !== 'zh' ? public._data : public.zh._data;
 - var navigation = data.navigation;
-- each title, slug in data.footer_navigation
-  - navigation[slug] = title
 - var year = (new Date()).getFullYear();
 - var baseUrl = environment === 'development' ? '' : '/ATAM';
 
@@ -15,5 +13,8 @@ footer#site-footer(role='contentinfo')
     nav.footer-navigation
       ul
         - each title, slug in navigation
+          - var href = (lang ? lang + '/' : '') + slug
+          li: a(href='#{baseUrl}/#{href}/', title='#{title}')= title
+        - each title, slug in data.footer_navigation
           - var href = (lang ? lang + '/' : '') + slug
           li: a(href='#{baseUrl}/#{href}/', title='#{title}')= title

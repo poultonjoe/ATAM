@@ -1,5 +1,5 @@
 {
   "index": {
-    "layout": "contact-layout.jade"
+    "layout": "_contact-layout.jade"
   }
 }

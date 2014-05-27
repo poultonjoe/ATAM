@@ -7,8 +7,5 @@
   },
   "footer_navigation": {
     "disclaimer": "Disclaimer"
-  },
-  "contact/index": {
-    "layout": "_partials/layout-blocks.jade"
   }
 }

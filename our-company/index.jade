@@ -1,3 +1,5 @@
+- var baseUrl = environment === 'development' ? '' : '/ATAM';
+
 h1.our-company Our company
 
 section.introduction
@@ -52,7 +54,7 @@ section.management-team
   h2 Management team
   div.team-member
     div.profile
-      img(src='/assets/img/andy-lim.png', alt='Andy Lim - Managing Director')
+      img(src='#{baseUrl}/assets/img/andy-lim.png', alt='Andy Lim - Managing Director')
       strong.name Andy Lim
       span.role Managing Director
     div.info
@@ -66,7 +68,7 @@ section.management-team
   
   div.team-member
     div.profile
-      img(src='/assets/img/teresa-may.png', alt='Teresa May')
+      img(src='#{baseUrl}/assets/img/teresa-may.png', alt='Teresa May')
       strong.name Teresa May
       span.role Director
     div.info
@@ -79,7 +81,7 @@ section.management-team
 
   div.team-member
     div.profile
-      img(src='/assets/img/cheah-chee-mun.png', alt='Cheah Chee Mun - Portfolio Strategist')
+      img(src='#{baseUrl}/assets/img/cheah-chee-mun.png', alt='Cheah Chee Mun - Portfolio Strategist')
       strong.name Cheah Chee Mun
       span.role Portfolio Strategist
     div.info
@@ -93,7 +95,7 @@ section.management-team
 
   div.team-member
     div.profile
-      img(src='/assets/img/aaron-tay.png', alt='Aaron Tay - Portfolio Manager')
+      img(src='#{baseUrl}/assets/img/aaron-tay.png', alt='Aaron Tay - Portfolio Manager')
       strong.name Aaron Tay
       span.role Portfolio Manager
     div.info
@@ -108,7 +110,7 @@ section.management-team
 
   div.team-member
     div.profile
-      img(src='/assets/img/joe-poulton.png', alt='Joe Poulton - Marketing')
+      img(src='#{baseUrl}/assets/img/joe-poulton.png', alt='Joe Poulton - Marketing')
       strong.name Joe Poulton
       span.role Marketing
     div.info
@@ -121,7 +123,7 @@ section.management-team
 
   div.team-member
     div.profile
-      img(src='/assets/img/michael-kristensen.png', alt='Michael Kristensen - Independent Advisor')
+      img(src='#{baseUrl}/assets/img/michael-kristensen.png', alt='Michael Kristensen - Independent Advisor')
       strong.name Michael Kristensen
       span.role Independent Advisor
     div.info
@@ -136,7 +138,7 @@ section.management-team
 
   div.team-member
     div.profile
-      img(src='/assets/img/yip-hon-mun.png', alt='Yip Hon Mun - Independent Advisor')
+      img(src='#{baseUrl}/assets/img/yip-hon-mun.png', alt='Yip Hon Mun - Independent Advisor')
       strong.name Yip Hon Mun
       span.role Independent Advisor
     div.info
