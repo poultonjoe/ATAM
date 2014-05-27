@@ -3,6 +3,9 @@ extend ../_partials/layout
 block header
   != partial('../_partials/header')
 
+block pre-content
+  #map(style='width:100%; height:250px;')
+
 block content
   != yield
 

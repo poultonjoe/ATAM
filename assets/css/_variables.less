@@ -20,8 +20,8 @@
 
 @small-padding: 15px;
 @large-padding: 30px;
-@small-margin: 20px;
-@large-margin: 40px;
+@small-margin: 40px;
+@large-margin: 80px;
 
 // ==========================================================================
 // Grid & media query defaults
@@ -65,9 +65,9 @@
 @box-line-height: ((50 / @rem-base) + 0rem);
 
 // Font sizes
-@h1-font-size: ((21 / @rem-base) + 0rem);
-@h2-font-size: ((18 / @rem-base) + 0rem);
-@h3-font-size: ((14 / @rem-base) + 0rem);
+@h1-font-size: ((27 / @rem-base) + 0rem);
+@h2-font-size: ((21 / @rem-base) + 0rem);
+@h3-font-size: ((16 / @rem-base) + 0rem);
 @h4-font-size: ((12 / @rem-base) + 0rem);
 @h5-font-size: ((11 / @rem-base) + 0rem);
 @h6-font-size: ((10 / @rem-base) + 0rem);
@@ -79,8 +79,8 @@
 @header-font-family:'Source Sans Pro', Arial, sans-serif;
 @header-font-weight:400;
 @header-font-color:@default-color;
-@header-margin-top:0.2em;
-@header-margin-bottom:0.5em;
+@header-margin-top:0;
+@header-margin-bottom:@small-margin;
 @sub-heading-font-color:lighten(@header-font-color, 50%);
 
 // Paragraphs
@@ -93,13 +93,13 @@
 // Rule
 @hr-border-width: 1px;
 @hr-border-style: solid;
-@hr-border-color: #939699;
-@hr-margin-top: 1.5em;
-@hr-margin-bottom: 1.5em;
+@hr-border-color: @default-color;
+@hr-margin-top: @large-margin;
+@hr-margin-bottom: @small-margin;
 
 // Blockquote
-@blockquote-margin-top: 1.5em;
-@blockquote-margin-bottom: 1.5em;
+@blockquote-margin-top: @large-margin;
+@blockquote-margin-bottom: @large-margin;
 @blockquote-font-color: @default-color;
 
 // Links

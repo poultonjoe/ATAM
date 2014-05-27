@@ -30,6 +30,7 @@ body{
 // ==========================================================================
 
 .title(){
+  font-size:@h2-font-size;
   text-transform:uppercase;
   letter-spacing:2px;
   text-align:center;
@@ -135,12 +136,12 @@ body{
 
     ul{
       margin:0;
-      padding:@small-margin;
+      padding:@small-margin / 2;
       list-style:none;
       .clearfix;
 
       li{
-        margin:0 @small-margin 0 0;
+        margin:0 @small-margin / 2 0 0;
         
         &:last-child{
           margin:0;
@@ -205,7 +206,7 @@ body{
   width:auto;
   max-width:@container-width;
   margin:0 auto;
-  padding:@large-margin @small-padding @small-padding;
+  padding:@small-margin @small-padding @small-padding;
   .fadein;
 
   // Flexbox
@@ -213,11 +214,17 @@ body{
   -ms-flex: 1;
   -webkit-flex: 1;
   flex: 1;
+
+  section{
+    margin:0 0 @large-margin;
+    text-align:justify;
+  }
 }
 
 #site-footer{
+  text-align:center;
   .box-sizing(border-box);
-  height:60px;
+  min-height:60px;
   width:100%;
   padding:12px @small-padding;
   background:#000;
@@ -226,9 +233,8 @@ body{
   .fadein;
 
   .info{
-    float:left;
-    width:50%;
-    padding-left:46px;
+    margin:0 auto 1.5em;
+    padding:60px 0 0 0;
     .box-sizing(border-box);
     position:relative;
 
@@ -240,14 +246,25 @@ body{
       .logo-monogram;
       position:absolute;
       top:0;
-      left:0;
+      left:50%;
+      margin-left:-18px;
     }
 
+    @media @small-query{
+      float:left;
+      width:50%;
+      margin:0;
+      padding:0 0 0 46px;
+
+      &:before{
+        left:0;
+        margin:0;
+      }
+    }
   }
   .footer-navigation{
-    float:right;
-    width:50%;
-    text-align:right;
+    display:block;
+    margin:0 auto;
 
     ul{
       margin:0;
@@ -265,14 +282,22 @@ body{
         }
 
         &:last-child{
-          display:block;
-          border:0;
+          @media @small-query{            
+            display:block;
+            border:0;
+          }
         }
 
         a{
           color:#fff;
         }
       }
+    }
+
+    @media @small-query{
+      float:right;
+      width:50%;
+      text-align:right;
     }
   }
 
@@ -283,6 +308,10 @@ body{
     margin:0 auto;
     padding:@small-padding;
     font-size:0.875rem;
+  }
+
+  @media @small-query{
+    text-align:left;
   }
 }
 
@@ -317,8 +346,6 @@ body{
   }
 
   #content{
-    text-align:center;
-
     h1,
     h2{
       .title;
@@ -326,8 +353,9 @@ body{
 
     section{
       border-bottom:1px solid @default-color;
-      margin:0 0 @large-margin;
-      padding:0 0 @large-margin;
+      margin:0 0 @small-margin;
+      padding:0 0 @small-margin;
+      text-align:justify;
 
       h2{
         position:relative;
@@ -364,6 +392,10 @@ body{
         h2:before{
           .icon-performance;
         }
+      }
+
+      @media @small-query{
+        text-align:center;
       }
     }
 
@@ -407,9 +439,6 @@ body{
     }
 
     section{
-      margin:0 0 @large-margin;
-      padding:0 0 @large-margin;
-
       &.introduction{
         @media @small-query{
           text-align:center;
@@ -417,22 +446,19 @@ body{
       }
       &.philosophy{
         @media @small-query{
-          //text-align:center;
           float:left;
           width:45%;
         }
       }
       &.principles{
         @media @small-query{
-          //text-align:center;
           float:right;
           width:45%;
         }
       }
       &.management-team{
         .team-member{
-          .clearfix;
-          margin-bottom:@large-margin;
+          margin-bottom:@small-margin;
 
           .profile{
             text-align:center;
@@ -450,16 +476,26 @@ body{
             strong{
               display:block;
             }
+          }
+        }
 
-            @media @small-query{
-              float:left;
-              width:150px;
-              margin-right:@small-padding;
+        @media @small-query{
+          .team-member{
+            display:table;
+
+            .profile,
+            .info{
+              display:table-cell;
+              vertical-align:top;
+            }
+
+            .profile{
+              width:20%;
               text-align:left;
             }
-          }
-
-          @media @small-query{
+            .info{
+              width:80%;
+            }
           }
         }
       }
@@ -473,7 +509,7 @@ body{
       letter-spacing:5px;
       border:0;
       position:relative;
-      padding:0 @small-padding * 2 3em * 0.7;
+      padding:0 @large-padding 3em * 0.7;
 
       cite{
         color:@default-color;
@@ -540,7 +576,7 @@ body{
       top:0;
       left:50%;
       margin-left:-16px;
-      .icon-company;
+      .icon-services;
     }
   }
 
@@ -551,115 +587,54 @@ body{
     }
 
     section{
-      margin:0 0 @large-margin;
-      padding:0 0 @large-margin;
-
       &.introduction{
         @media @small-query{
           text-align:center;
         }
       }
-      &.philosophy{
+      &.investment-philosophy{
         @media @small-query{
-          //text-align:center;
           float:left;
           width:45%;
         }
       }
-      &.principles{
+      &.risk-management{
         @media @small-query{
-          //text-align:center;
           float:right;
           width:45%;
         }
       }
-      &.management-team{
-        .team-member{
-          .clearfix;
-          margin-bottom:@large-margin;
-
-          .profile{
-            text-align:center;
-            margin:0 0 1em;
-
-            img{
-              width:auto;
-              height:100%;
-
-              @media @small-query{
-                height:56px;
-              }
-            }
-
-            strong{
-              display:block;
-            }
-
-            @media @small-query{
-              float:left;
-              width:150px;
-              margin-right:@small-padding;
-              text-align:left;
-            }
-          }
-
-          @media @small-query{
-          }
-        }
-      }
-    }
-
-    blockquote{
-      clear:both;
-      .clearfix;
-      font-style:italic;
-      font-size:1.25rem;
-      letter-spacing:5px;
-      border:0;
-      position:relative;
-      padding:0 @small-padding * 2 3em * 0.7;
-
-      cite{
-        color:@default-color;
-        letter-spacing:0;
-        text-align:right;
-        position:absolute;
-        bottom:0;
-        right:@small-padding;
-
-        strong{
-          display:block;
-        }
-
-        &:before{
-          content:none;
-        }        
-
+      &.trusts{
         @media @small-query{
-          right:15%;
+          float:left;
+          width:26%;
+          margin-right:11%;
+        }
+      }      
+      &.pic{
+        @media @small-query{
+          float:left;
+          width:26%;
         }
       }
-
-      &:before,
-      &:after{
-        display:inline-block;
-        font-size:2em;
-        color:@secondary-color;
-        line-height:0.5;
-        position:relative;
-        top:0.25em;
+      &.structuring{
+        @media @small-query{
+          float:right;
+          width:26%;
+        }
+      }      
+      &.universal-life-insurance{
+        @media @small-query{
+          clear:both;
+          float:left;
+          width:45%;
+        }
       }
-
-      &:before{
-        content:'\201C';
-        margin-left:-.75em;
-      }
-      &:after{
-        content:'\201D';
-      }
-
-      @media @small-query{
-        padding:0 15% 3em * 0.7;
+      &.charitable-foundations{
+        @media @small-query{
+          float:right;
+          width:45%;
+        }
       }
     }
   }
@@ -691,9 +666,6 @@ body{
 
   #content{
     section{
-      margin:0 0 @large-margin;
-      padding:0 0 @large-margin;
-
       &.introduction{
         @media @small-query{
           text-align:center;
@@ -708,13 +680,10 @@ body{
 // ==========================================================================
 
 .contact{
-  #map{
-    margin-bottom:@small-margin;
-  }
-
   address{
     text-align:center;
     font-style:normal;
+    margin-bottom:@small-margin;
 
     ul{
       margin:0;
