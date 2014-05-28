@@ -1,5 +1,5 @@
 - var lang = current.path[0] === 'zh' ? 'zh' : '';
-- var home = lang === 'en' ? current.path[0] === 'index' : current.path[1] === 'index';
+- var isHomepage = lang ? current.path[1] === 'index' : current.path[0] === 'index';
 - var logo = lang || 'en';
 - var navigation = lang !== 'zh' ? public._data.navigation : public.zh._data.navigation
 - var baseUrl = environment === 'development' ? '' : '/ATAM';

@@ -23,6 +23,10 @@ body{
   flex-direction: column;
   
   min-height: 100vh;
+
+  .modal-visible & {
+    overflow:hidden;
+  }
 }
 
 // ==========================================================================
@@ -54,7 +58,8 @@ body{
   font-family:@header-font-family;
   padding:@small-padding;
   .fadein;
-  background:@main-color;
+  background:@main-color url(../img/header.jpg) center 0 no-repeat;
+  background-size:auto 100%;
 
   #logo{
     float:left;
@@ -323,27 +328,45 @@ body{
 .home{
 
   #site-header{
-    height:682px;
+    min-height:480px;
+    background-image:url(../img/hero.jpg);
+    background-size:cover;
+    position:relative;
+
+    @media @small-query{
+      min-height:680px;
+    }
   }
 
   #introduction{
-    .title;
     clear:both;
-    margin-top:180px;
-  }
-
-  #skip-to-content{
-    margin:300px auto 0;
-    height:46px;
-    width:46px;
-    display:block;
-    text-indent:-999em;
-    background:#333;
-  }
-
-  #skip-to-content{
     position:absolute;
-    top:-999em;
+    top:77px;
+    left:0;
+    right:0;
+    bottom:0;
+    text-align:center;
+
+    h1{
+      .title;
+      color:#fff;
+      font-weight:300;
+      position:absolute;
+      top:30%;
+      width:100%;
+    }
+
+    #skip-to-content{
+      height:46px;
+      width:46px;
+      display:block;
+      text-indent:-999em;
+      .icon-scroll-down;
+      position:absolute;
+      bottom:15%;
+      left:50%;
+      margin-left:-23px;
+    }
   }
 
   #content{
@@ -713,6 +736,47 @@ body{
   }
 }
 
+// ==========================================================================
+// Modal
+// ==========================================================================
+
+#overlay{
+  position:fixed;
+  height:100%;
+  width:100%;
+  top:0;
+  left:0;
+  background:rgba(0,0,0,0.75);
+  display:none;
+}
+
+#modal{
+  position:fixed;
+  height:90%;
+  width:90%;
+  top:5%;
+  left:5%;
+  bottom:5%;
+  overflow:auto;
+  background:#fff;
+  display:none;
+
+  .content{
+    padding:@large-padding;
+    font-size:0.75em;
+
+    h1{
+      text-align:center;
+    }
+    h1,h2,h3,h4,h5,h6{
+      margin-bottom:0.5em;
+    }
+  }
+
+  button{    
+    margin:0 @large-padding @small-margin / 2;
+  }
+}
 
 // ==========================================================================
 // Animations
