@@ -74,6 +74,7 @@ hr{
 p, pre{
 	margin-top: @paragraph-margin-top;
 	margin-bottom: @paragraph-margin-bottom;
+	font-weight: @paragraph-font-weight;
 }
 
 blockquote {
@@ -98,6 +99,7 @@ blockquote {
 }
 
 a{
+	font-weight:@header-font-weight;
 	color: @link-color;
 	text-decoration:none;
 	display: inline-block;
@@ -110,4 +112,8 @@ a{
 	p & {
 		text-decoration:underline;
 	}
+}
+
+strong{
+	font-weight:@header-font-weight;
 }

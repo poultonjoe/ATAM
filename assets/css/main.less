@@ -52,7 +52,7 @@ body{
 #site-header{
   .box-sizing(border-box);
   font-family:@header-font-family;
-  padding:33px @small-padding;
+  padding:@small-padding;
   .fadein;
   background:@main-color;
 
@@ -132,7 +132,7 @@ body{
     height:auto;
     overflow:hidden;
     .transition(max-height .5s);
-    margin:-33px -@small-padding 33px;
+    margin:-@small-padding -@small-padding @small-padding;
 
     ul{
       margin:0;
