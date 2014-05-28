@@ -203,7 +203,7 @@ body{
 
 #content{
   .box-sizing(border-box);
-  width:auto;
+  width:100%;
   max-width:@container-width;
   margin:0 auto;
   padding:@small-margin @small-padding @small-padding;
@@ -214,6 +214,7 @@ body{
   -ms-flex: 1;
   -webkit-flex: 1;
   flex: 1;
+  -ms-flex-preferred-size:auto;
 
   section{
     margin:0 0 @large-margin;
