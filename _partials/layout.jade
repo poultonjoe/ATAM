@@ -1,6 +1,7 @@
 - var lang = current.path[0] === 'zh' ? 'zh' : 'en';
 - var isHome = current.path[0] === 'index' || lang === 'zh' && current.path[1] === 'index';
 - var className = isHome ? 'home' : (lang === 'en' ? current.path[0] : current.path[1]);
+- var langPath = lang === 'zh' ? '/zh' : '';
 - var baseUrl = environment === 'development' ? '' : '/ATAM';
 
 
@@ -53,4 +54,12 @@ html(lang='#{lang}', class='#{className}')
     script(type='text/javascript', src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js')
     script(type='text/javascript', src='//cdnjs.cloudflare.com/ajax/libs/Cookies.js/0.4.0/cookies.min.js')
     script(type='text/javascript', src='#{baseUrl}/assets/js/main.js')
+    script.
+      $(function(){
+        var options = {
+          disclaimer: '#{baseUrl}#{langPath}/disclaimer/'
+        };
+
+        ATAM.init(options);
+      });
     block scripts

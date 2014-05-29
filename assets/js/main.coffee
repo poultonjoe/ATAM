@@ -1,5 +1,5 @@
 ATAM = ATAM ||
-  init: ->
+  init: (options) ->
     $window = $(window)
     $html = $('html')
     $menu = $('.menu-button')
@@ -8,23 +8,14 @@ ATAM = ATAM ||
     $scrollDown = $('#skip-to-content')
     $content = $('#content')
     $acceptTerms = $('#accept-terms')
-    lang = if document.location.href.indexOf('zh') > -1 then 'zh' else ''
-    disclaimerUrl = document.location.origin + lang + '/disclaimer/'
     debounce = null
     IMG_H = 946
     IMG_W = 1600
-    ###
-    $hero = ->
-      if $header.length
-        $header.css
-          height: $window.height() - 77
-        $intro.css
-          height: $window.height() - 77
-    ###
     $hero = ->
       if $header.length
         $header.css
           height: Math.ceil IMG_H / IMG_W * $window.width()
+
 
     $html.addClass 'js'
     $html.addClass if 'ontouchstart' in window then 'touch' else 'no-touch'
@@ -51,7 +42,7 @@ ATAM = ATAM ||
     $hero()
 
     unless Cookies.get 'DisclaimerAccepted'
-      @launchModal(disclaimerUrl)
+      @launchModal(options.disclaimer)
 
   launchModal: (url) ->
     $html = $('html')
@@ -76,8 +67,4 @@ ATAM = ATAM ||
     
     Cookies.set 'DisclaimerAccepted', true, 
       expires: new Date 2030, 0, 1
-
-
-$ ->
-  ATAM.init()
   
