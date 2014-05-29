@@ -38,6 +38,13 @@ ATAM = ATAM ||
       if debounce
           clearTimeout debounce
       debounce = setTimeout $hero, 50
+    
+    unless $html.hasClass 'home'
+      $window.on 'scroll', ->
+        if $window.scrollTop() > 0
+          $html.addClass 'fixed'
+        else
+          $html.removeClass 'fixed'
 
     $hero()
 

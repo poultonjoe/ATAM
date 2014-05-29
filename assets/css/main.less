@@ -204,6 +204,14 @@ body{
       }
     }
   }
+
+  .fixed & {
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    z-index:2;
+  }
 }
 
 #content{
@@ -224,6 +232,10 @@ body{
   section{
     margin:0 0 @large-margin;
     text-align:justify;
+  }
+
+  .fixed & {
+    padding-top:@small-margin + 77px;
   }
 }
 
