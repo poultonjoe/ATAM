@@ -328,24 +328,20 @@ body{
 .home{
 
   #site-header{
-    min-height:480px;
+    min-height:360px;
     background-image:url(../img/hero.jpg);
     background-size:cover;
     position:relative;
-
-    @media @small-query{
-      min-height:680px;
-    }
   }
 
-  #introduction{
+  /*#introduction{
     clear:both;
     position:absolute;
     top:77px;
     left:0;
     right:0;
     bottom:0;
-    text-align:center;
+    text-align:center;*/
 
     h1{
       .title;
@@ -353,7 +349,8 @@ body{
       font-weight:300;
       position:absolute;
       top:30%;
-      width:100%;
+      left:@small-padding;
+      right:@small-padding;
     }
 
     #skip-to-content{
@@ -367,7 +364,7 @@ body{
       left:50%;
       margin-left:-23px;
     }
-  }
+  /*}*/
 
   #content{
     h1,

@@ -4,18 +4,27 @@ ATAM = ATAM ||
     $html = $('html')
     $menu = $('.menu-button')
     $header = $('.home #site-header')
-    $intro = $('.home #introduction')
+    $intro = $('h1', $header)
     $scrollDown = $('#skip-to-content')
     $content = $('#content')
     $acceptTerms = $('#accept-terms')
     lang = if document.location.href.indexOf('zh') > -1 then 'zh' else ''
     disclaimerUrl = document.location.origin + lang + '/disclaimer/'
+    debounce = null
+    IMG_H = 946
+    IMG_W = 1600
+    ###
     $hero = ->
       if $header.length
         $header.css
           height: $window.height() - 77
         $intro.css
           height: $window.height() - 77
+    ###
+    $hero = ->
+      if $header.length
+        $header.css
+          height: Math.ceil IMG_H / IMG_W * $window.width()
 
     $html.addClass 'js'
     $html.addClass if 'ontouchstart' in window then 'touch' else 'no-touch'
@@ -23,6 +32,7 @@ ATAM = ATAM ||
     $menu.on 'click', (e) ->
       e.preventDefault()
       $html.toggleClass 'menu-visible'
+      $intro.fadeToggle 250
 
     $scrollDown.on 'click', (e) ->
       e.preventDefault()
@@ -33,8 +43,10 @@ ATAM = ATAM ||
     $acceptTerms.on 'click', (e) =>
       @closeModal()
 
-    $window.on 'resize', ->
-      $hero()
+    $window.on 'resize', ->      
+      if debounce
+          clearTimeout debounce
+      debounce = setTimeout $hero, 50
 
     $hero()
 
