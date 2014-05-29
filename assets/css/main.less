@@ -333,6 +333,23 @@ body{
   }
 }
 
+#skip-to-navigation{
+  display:none;
+  text-indent:-999em;
+  width:46px;
+  height:46px;
+  position:fixed;
+  bottom:100px;
+  right:60px;
+  .icon-scroll-up;
+  z-index:10;
+  opacity:0;
+
+  @media screen and (min-width:(@container-width + 200)){
+    display:block;
+  }
+}
+
 // ==========================================================================
 // Home
 // ==========================================================================
@@ -341,6 +358,7 @@ body{
 
   #site-header{
     min-height:360px;
+    //max-height:682px;
     background-image:url(../img/hero.jpg);
     background-size:cover;
     position:relative;
