@@ -2,7 +2,7 @@
 - var isHome = current.path[0] === 'index' || lang === 'zh' && current.path[1] === 'index';
 - var className = isHome ? 'home' : (lang === 'en' ? current.path[0] : current.path[1]);
 - var langPath = lang === 'zh' ? '/zh' : '';
-- var baseUrl = environment === 'development' ? '' : '/ATAM';
+- var baseUrl =github_pages ? (environment === 'development' ? '' : '/ATAM') : '';
 
 
 doctype

@@ -2,7 +2,7 @@
 - var data = lang !== 'zh' ? public._data : public.zh._data;
 - var navigation = data.navigation;
 - var year = (new Date()).getFullYear();
-- var baseUrl = environment === 'development' ? '' : '/ATAM';
+- var baseUrl = github_pages ? (environment === 'development' ? '' : '/ATAM') : '';
 
 footer#site-footer(role='contentinfo')
   .wrap

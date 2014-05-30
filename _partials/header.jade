@@ -2,7 +2,7 @@
 - var isHomepage = lang ? current.path[1] === 'index' : current.path[0] === 'index';
 - var logo = lang || 'en';
 - var navigation = lang !== 'zh' ? public._data.navigation : public.zh._data.navigation
-- var baseUrl = environment === 'development' ? '' : '/ATAM';
+- var baseUrl = github_pages ? (environment === 'development' ? '' : '/ATAM') : '';
 
 header(role='banner')#site-header
   .wrap
