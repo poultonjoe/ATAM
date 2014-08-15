@@ -15,9 +15,9 @@ header(role='banner')#site-header
             li.selected: a(href='#{baseUrl}/#{href}/', title='#{title}')= title
           else
             li: a(href='#{baseUrl}/#{href}/', title='#{title}')= title
-      //-  
-        li: a(href='/', title='English') EN
-        li: a(href='/zh/', title='Chinese') ZH
+        -  
+          li: a(href='/', title='English') EN
+          li: a(href='/zh/', title='Chinese') ZH
     
     #logo
       a(href='#{baseUrl}/', title='AT Asset Management - Home', class='#{logo}') AT Asset Management
