@@ -1,3 +1,5 @@
+- var baseUrl = github_pages ? (environment === 'development' ? '' : '/ATAM') : '';
+
 h1.performance Performance
 
 section.introduction
@@ -7,4 +9,7 @@ section.introduction
     decisions and are supported by global resources. Active risk management is integral to our investment process as we 
     seek competitive risk-adjusted returns over the long-term.
 
-    If you would like further information regarding AT Asset Management's investment performance please [contact us](/contact "contact us").
+  p 
+    | If you would like further information regarding AT Asset Management's investment performance please 
+    a(href='#{baseUrl}/contact', title='Read more about our company') contact us
+    | .

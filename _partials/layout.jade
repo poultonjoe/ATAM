@@ -2,15 +2,16 @@
 - var isHome = current.path[0] === 'index' || lang === 'zh' && current.path[1] === 'index';
 - var className = isHome ? 'home' : (lang === 'en' ? current.path[0] : current.path[1]);
 - var langPath = lang === 'zh' ? '/zh' : '';
-- var baseUrl =github_pages ? (environment === 'development' ? '' : '/ATAM') : '';
-
+- var baseUrl = github_pages ? (environment === 'development' ? '' : '/ATAM') : '';
+- var slug = lang === 'zh' ? current.path[1] : current.path[0];
+- var pageName = lang !== 'zh' ? public._data.navigation[slug] : public.zh._data.navigation[slug]
 
 doctype
 html(lang='#{lang}', class='#{className}')
   head
     meta(charset='utf-8')
     meta(name='viewport', content='width=device-width, initial-scale=1.0, maximum-scale=1.0')
-    title= locals.title ? title + " | " + site_title : site_title
+    title= isHome ? site_title : site_title + ' - ' + pageName
     link(rel='shortcut icon', href='#{baseUrl}/assets/img/favicon.ico')
     link(rel="stylesheet", href="#{baseUrl}/assets/css/main.css")
   body

@@ -4,6 +4,8 @@
 - var navigation = lang !== 'zh' ? public._data.navigation : public.zh._data.navigation
 - var baseUrl = github_pages ? (environment === 'development' ? '' : '/ATAM') : '';
 - var logoUrl = lang !== 'zh' ? baseUrl : baseUrl + '/zh';
+- var enClassName = current.path[0] === 'zh' ? 'lang en' : 'lang en selected';
+- var zhClassName = current.path[0] === 'zh' ? 'lang zh selected' : 'lang zh';
 
 header(role='banner')#site-header
   .wrap
@@ -16,9 +18,8 @@ header(role='banner')#site-header
             li.selected: a(href='#{baseUrl}/#{href}/', title='#{title}')= title
           else
             li: a(href='#{baseUrl}/#{href}/', title='#{title}')= title
-        -  
-          li: a(href='#{baseUrl}/', title='English') EN
-          li: a(href='#{baseUrl}/zh/', title='Chinese') ZH
+        li(class='#{enClassName}'): a(href='#{baseUrl}/', title='English') EN
+        li(class='#{zhClassName}'): a(href='#{baseUrl}/zh/', title='中') 中
     
     #logo
       a(href='#{logoUrl}/', title='AT Asset Management - Home', class='#{logo}') AT Asset Management
@@ -27,6 +28,5 @@ header(role='banner')#site-header
       span Toggle menu
 
     if isHomepage
-      //#introduction
       h1 Fixed income &amp; equities - The two things we know best
       a(href='#content', title='Skip to content')#skip-to-content Skip to content

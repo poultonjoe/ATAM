@@ -1,11 +1,11 @@
 {
   "navigation": {
-    "our-company": "关于我们",
-    "services": "我们的服务",
-    "performance": "投资表现",
-    "contact": "与我们联系"
+    "guan-yu-wo-men": "关于我们",
+    "wo-men-de-fu-wu": "我们的服务",
+    "tou-zi-biao-xian": "投资表现",
+    "yu-wo-men-lian-xi": "与我们联系"
   },
   "footer_navigation": {
-    "disclaimer": "免责声明"
+    "mian-ze-sheng-ming": "免责声明"
   }
 }
