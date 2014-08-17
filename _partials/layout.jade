@@ -3,7 +3,8 @@
 - var getClassname = function() {
 -   if (isHome) return 'home';
 -   if (lang === 'en') return current.path[0];
--   return public[lang][current.path[1]]._data[current.source].classname;
+-   var currentPage = public[lang][current.path[1]];
+-   return currentPage && currentPage._data && currentPage._data.index.classname || '';
 - };
 - var langPath = lang === 'zh' ? '/zh' : '';
 - var baseUrl = github_pages ? (environment === 'development' ? '' : '/ATAM') : '';
