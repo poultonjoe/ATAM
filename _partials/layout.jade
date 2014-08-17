@@ -1,13 +1,17 @@
 - var lang = current.path[0] === 'zh' ? 'zh' : 'en';
 - var isHome = current.path[0] === 'index' || lang === 'zh' && current.path[1] === 'index';
-- var className = isHome ? 'home' : (lang === 'en' ? current.path[0] : current.path[1]);
+- var getClassname = function() {
+-   if (isHome) return 'home';
+-   if (lang === 'en') return current.path[0];
+-   return public[lang][current.path[1]]._data[current.source].classname;
+- };
 - var langPath = lang === 'zh' ? '/zh' : '';
 - var baseUrl = github_pages ? (environment === 'development' ? '' : '/ATAM') : '';
 - var slug = lang === 'zh' ? current.path[1] : current.path[0];
 - var pageName = lang !== 'zh' ? public._data.navigation[slug] : public.zh._data.navigation[slug]
 
 doctype
-html(lang='#{lang}', class='#{className}')
+html(lang='#{lang}', class='#{getClassname()}')
   head
     meta(charset='utf-8')
     meta(name='viewport', content='width=device-width, initial-scale=1.0, maximum-scale=1.0')
