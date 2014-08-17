@@ -3,9 +3,9 @@ deploy:
 	rm -rf www.tgz
 	harp compile ./ www
 	cd ./www && rm makefile && git init . && git add -A . && git commit -m "Deploy" && git push "git@github.com:poultonjoe/ATAM.git" master:gh-pages --force
-	rm -rf .git
+	tar -zcvf www.tgz .
+	mv www.tgz ../www.tgz
 	cd ..
-	tar -zcvf www.tgz www
 	rm -rf www
 	json -I -f _harp.json -e 'this.globals.github_pages=false'
 	git checkout _harp.json
