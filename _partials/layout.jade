@@ -64,7 +64,7 @@ html(lang='#{lang}', class='#{getClassname()}')
     script.
       $(function(){
         var options = {
-          disclaimer: '#{baseUrl}#{langPath}/disclaimer/'
+          disclaimer: '#{baseUrl}#{langPath}/#{translations.disclaimer_slug[lang]}/'
         };
 
         ATAM.init(options);

@@ -1,6 +1,6 @@
-- var lang = current.path[0] === 'zh' ? 'zh' : '';
-- var isHomepage = lang ? current.path[1] === 'index' : current.path[0] === 'index';
-- var logo = lang || 'en';
+- var lang = current.path[0] === 'zh' ? 'zh' : 'en';
+- var isHomepage = lang !== 'en' ? current.path[1] === 'index' : current.path[0] === 'index';
+- var logo = lang;
 - var navigation = lang !== 'zh' ? public._data.navigation : public.zh._data.navigation
 - var baseUrl = github_pages ? (environment === 'development' ? '' : '/ATAM') : '';
 - var logoUrl = lang !== 'zh' ? baseUrl : baseUrl + '/zh';
@@ -12,8 +12,8 @@ header(role='banner')#site-header
     nav#main-navigation
       ul
         - each title, slug in navigation
-          - var href = (lang ? lang + '/' : '') + slug
-          - var path = lang ? current.path[1] : current.path[0]
+          - var href = (lang !== 'en' ? lang + '/' : '') + slug
+          - var path = lang !== 'en' ? current.path[1] : current.path[0]
           if path === slug
             li.selected: a(href='#{baseUrl}/#{href}/', title='#{title}')= title
           else
@@ -28,5 +28,5 @@ header(role='banner')#site-header
       span Toggle menu
 
     if isHomepage
-      h1 Fixed income &amp; equities - The two things we know best
+      h1= translations.homepage_welcome[lang]
       a(href='#content', title='Skip to content')#skip-to-content Skip to content
