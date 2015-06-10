@@ -466,6 +466,11 @@ body{
           .icon-services;
         }
       }
+      &.our-team{
+        h2:before{
+          .icon-our-fund;
+        }
+      }
       &.our-fund{
         h2:before{
           .icon-our-fund;
@@ -532,6 +537,13 @@ body{
         @media @small-query{
           float:right;
           width:45%;
+        }
+       }
+      &.investment-philosophy{
+        @media @small-query{
+          clear:left;
+          text-align:center;
+          width:auto%;
         }
       }
       &.management-team{
@@ -717,6 +729,158 @@ body{
           float:right;
           width:45%;
         }
+      }
+    }
+  }
+}
+
+// ==========================================================================
+// Our Team
+// ==========================================================================
+
+.our-team{
+
+  h1{
+    position:relative;
+    padding-top:45px;
+
+    &:before{
+      content:'';
+      display:block;
+      width:32px;
+      height:32px;
+      position:absolute;
+      top:0;
+      left:50%;
+      margin-left:-16px;
+      .icon-company;
+    }
+  }
+
+  #content{
+    h1,
+    h2{
+      .title;
+    }
+
+    section{
+      &.introduction{
+        @media @small-query{
+          text-align:center;
+        }
+      }
+      &.philosophy{
+        @media @small-query{
+          float:left;
+          width:45%;
+        }
+      }
+      &.principles{
+        @media @small-query{
+          float:right;
+          width:45%;
+        }
+      }
+      &.management-team{
+        .team-member{
+          margin-bottom:@small-margin;
+
+          .profile{
+            text-align:center;
+            margin:0 0 1em;
+
+            img{
+              width:auto;
+              height:100%;
+
+              @media @small-query{
+                height:90px;
+              }
+            }
+
+            .name{
+              display:block;
+              font-weight:400;
+            }
+            .role{
+              font-weight:300;
+            }
+          }
+        }
+
+        @media @small-query{
+          .team-member{
+            display:table;
+
+            .profile,
+            .info{
+              display:table-cell;
+              vertical-align:top;
+            }
+
+            .profile{
+              width:20%;
+              text-align:left;
+            }
+            .info{
+              width:80%;
+            }
+          }
+        }
+      }
+    }
+
+    blockquote{
+      clear:both;
+      .clearfix;
+      font-style:italic;
+      font-size:1.25rem;
+      letter-spacing:5px;
+      border:0;
+      position:relative;
+      padding:0 @large-padding 3em * 0.7;
+
+      cite{
+        color:@default-color;
+        letter-spacing:0;
+        text-align:right;
+        position:absolute;
+        bottom:0;
+        right:@small-padding;
+
+        strong{
+          display:block;
+        }
+
+        &:before{
+          content:none;
+        }        
+
+        @media @small-query{
+          right:15%;
+        }
+      }
+
+      &:before,
+      &:after{
+        display:inline-block;
+        font-size:2em;
+        color:@secondary-color;
+        line-height:0.5;
+        position:relative;
+        top:0.25em;
+      }
+
+      &:before{
+        content:'\201C';
+        margin-left:-.75em;
+      }
+      &:after{
+        content:'\201D';
+      }
+
+      @media @small-query{
+        padding:0 14% 3em * 0.7;
       }
     }
   }
