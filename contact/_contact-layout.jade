@@ -3,6 +3,10 @@ extend ../_partials/layout
 block header
   != partial('../_partials/header')
 
+  div.team-member
+    div.profile
+      img(src='#{baseUrl}/assets/img/IMG_0975.jpg', alt='AT Asset Management Office')
+             
 block pre-content
   #map(style='width:100%; height:450px;')
 
@@ -11,6 +15,8 @@ block content
 
 block footer
   != partial('../_partials/footer')
+
+
 
 block scripts
   script(type="text/javascript", src="http://maps.googleapis.com/maps/api/js?key=#{google_maps.api_key}&sensor=false")
@@ -28,3 +34,4 @@ block scripts
         map: map
       });
     });
+
