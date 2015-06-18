@@ -396,9 +396,8 @@ body{
 
   #site-header{
     min-height:360px;
-    //max-height:682px;
     background-image:url(../img/hero.jpg);
-    background-size:cover;
+    background-size:auto 100%;
     position:relative;
 
     h1{
@@ -411,84 +410,12 @@ body{
     }
 
     #skip-to-content{
-      height:46px;
-      width:46px;
-      display:block;
-      text-indent:-999em;
-      .icon-scroll-down;
-      position:absolute;
-      bottom:15%;
-      left:50%;
-      margin-left:-23px;
+      display:none;
     }
   }
 
   #content{
-    h1,
-    h2{
-      .title;
-    }
-
-    section{
-      border-bottom:1px solid @default-color;
-      margin:0 0 @small-margin;
-      padding:0 0 @small-margin;
-      text-align:justify;
-
-      h2{
-        position:relative;
-        padding-top:45px;
-
-        &:before{
-          content:'';
-          display:block;
-          width:32px;
-          height:32px;
-          position:absolute;
-          top:0;
-          left:50%;
-          margin-left:-16px;
-        }
-      }
-
-      &:last-child{
-        border:0;
-        padding:0;
-      }
-
-      &.our-company{
-        h2:before{
-          .icon-company;
-        }
-      }
-      &.services{
-        h2:before{
-          .icon-services;
-        }
-      }
-      &.our-team{
-        h2:before{
-          .icon-our-fund;
-        }
-      }
-      &.our-fund{
-        h2:before{
-          .icon-our-fund;
-        }
-      }
-
-      @media @small-query{
-        text-align:center;
-      }
-    }
-
-    p:last-child{
-      margin:0;
-    }
-
-    a{
-      font-style:italic;
-    }
+    display:none;
   }
 }
 
