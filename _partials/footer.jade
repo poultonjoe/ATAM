@@ -12,9 +12,9 @@ footer#site-footer(role='contentinfo')
 
     nav.footer-navigation
       ul
-        - each title, slug in navigation
-          - var href = (lang ? lang + '/' : '') + slug
-          li: a(href='#{baseUrl}/#{href}/', title='#{title}')= title
-        - each title, slug in data.footer_navigation
-          - var href = (lang ? lang + '/' : '') + slug
-          li: a(href='#{baseUrl}/#{href}/', title='#{title}')= title
+        - each page in navigation
+          - var href = (lang ? lang + '/' : '') + page.slug
+          li: a(href='#{baseUrl}/#{href}/', title='#{page.title}')= page.title
+        - each page in data.footer_navigation
+          - var href = (lang ? lang + '/' : '') + page.slug
+          li: a(href='#{baseUrl}/#{href}/', title='#{title}')= page.title

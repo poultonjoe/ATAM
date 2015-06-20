@@ -1,12 +1,70 @@
 {
-  "navigation": {
-    "our-company": "Our Company",
-    "services": "Services",
-    "our-team": "Our Team",
-    "our-fund": "Our Fund",
-    "contact": "Contact"
-  },
-  "footer_navigation": {
-    "disclaimer": "Disclaimer"
-  }
+  "navigation": [
+    {
+      "slug": "our-company",
+      "title": "Our company"
+    },
+    {
+      "slug": "services",
+      "title": "Services",
+      "children": [
+        {
+          "slug": "fund-management",
+          "title": "Fund management"
+        },
+        {
+          "slug": "tailored-solutions",
+          "title": "Tailored solutions"
+        }
+      ]
+    },
+    {
+      "slug": "our-team",
+      "title": "Our team",
+      "children": [
+        {
+          "slug": "#andy-lim",
+          "title": "Andy Lim"
+        },
+        {
+          "slug": "#teresa-tay",
+          "title": "Teresa Tay"
+        },
+        {
+          "slug": "#ryan-yang",
+          "title": "Ryan Yang"
+        },
+        {
+          "slug": "#cheah-chee-mun",
+          "title": "Cheah Chee Mun"
+        },
+        {
+          "slug": "#joe-poulton",
+          "title": "Joe Poulton"
+        },
+        {
+          "slug": "#julie-sim",
+          "title": "Julie Sim"
+        },
+        {
+          "slug": "#gerlyn-loh",
+          "title": "Gerlyn Loh"
+        }
+      ]
+    },
+    {
+      "slug": "our-fund",
+      "title": "Our fund"
+    },
+    {
+      "slug": "contact",
+      "title": "Contact"
+    }
+  ],
+  "footer_navigation": [
+    {
+      "slug": "disclaimer",
+      "title": "Disclaimer"
+    }
+  ]
 }

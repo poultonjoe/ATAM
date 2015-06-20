@@ -1,7 +1,7 @@
 - var lang = current.path[0] === 'zh' ? 'zh' : 'en';
 - var isHomepage = lang !== 'en' ? current.path[1] === 'index' : current.path[0] === 'index';
 - var logo = lang;
-- var navigation = lang !== 'zh' ? public._data.navigation : public.zh._data.navigation
+- var navigation = lang !== 'zh' ? public._data.navigation : public.zh._data.navigation;
 - var baseUrl = github_pages ? (environment === 'development' ? '' : '/ATAM') : '';
 - var logoUrl = lang !== 'zh' ? baseUrl : baseUrl + '/zh';
 - var enClassName = current.path[0] === 'zh' ? 'lang en' : 'lang en selected';
@@ -11,13 +11,13 @@ header(role='banner')#site-header
   .wrap
     nav#main-navigation
       ul
-        - each title, slug in navigation
-          - var href = (lang !== 'en' ? lang + '/' : '') + slug
+        - each page in navigation
+          - var href = (lang !== 'en' ? lang + '/' : '') + page.slug
           - var path = lang !== 'en' ? current.path[1] : current.path[0]
-          if path === slug
-            li.selected: a(href='#{baseUrl}/#{href}/', title='#{title}')= title
+          if path === page.slug
+            li.selected: a(href='#{baseUrl}/#{href}/', title='#{page.title}')= page.title
           else
-            li: a(href='#{baseUrl}/#{href}/', title='#{title}')= title
+            li: a(href='#{baseUrl}/#{href}/', title='#{page.title}')= page.title
         li(class='#{enClassName}'): a(href='#{baseUrl}/', title='English') EN
         li(class='#{zhClassName}'): a(href='#{baseUrl}/zh/', title='中') 中
     
@@ -30,3 +30,15 @@ header(role='banner')#site-header
     if isHomepage
       h1= translations.homepage_welcome[lang]
       a(href='#content', title='Skip to content')#skip-to-content Skip to content
+
+  - each page in navigation
+    if (lang !== 'en' ? current.path[1] : current.path[0]) === page.slug && page.children
+      .sub-navigation
+        ul
+          - each child in page.children       
+            - var href = (lang !== 'en' ? lang + '/' : '') + page.slug + '/' + child.slug
+            - var path = lang !== 'en' ? current.path[2] : current.path[1]
+            if path === child.slug
+              li.selected: a(href='#{baseUrl}/#{href}/', title='#{child.title}')= child.title
+            else
+              li: a(href='#{baseUrl}/#{href}/', title='#{child.title}')= child.title

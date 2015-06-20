@@ -1,11 +1,26 @@
 {
-  "navigation": {
-    "guan-yu-wo-men": "关于我们",
-    "wo-men-de-fu-wu": "我们的服务",
-    "tou-zi-biao-xian": "投资表现",
-    "yu-wo-men-lian-xi": "与我们联系"
-  },
-  "footer_navigation": {
-    "mian-ze-sheng-ming": "免责声明"
-  }
+  "navigation": [
+    {
+      "slug": "guan-yu-wo-men",
+      "title": "关于我们"
+    },
+    {
+      "slug": "wo-men-de-fu-wu",
+      "title": "我们的服务"
+    },
+    {
+      "slug": "tou-zi-biao-xian",
+      "title": "投资表现"
+    },
+    {
+      "slug": "yu-wo-men-lian-xi",
+      "title": "与我们联系"
+    }
+  ],
+  "footer_navigation": [
+    {
+      "slug": "mian-ze-sheng-ming",
+      "title": "免责声明"
+    }
+  ]
 }

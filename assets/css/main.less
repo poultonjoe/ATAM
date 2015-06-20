@@ -250,6 +250,38 @@ body{
     right:0;
     z-index:2;
   }
+
+  .sub-navigation{
+    background:@default-color;
+    margin:@small-padding -@small-padding -@small-padding;
+    padding:0 @small-padding;
+
+    ul{
+      max-width:960px;
+      margin:0 auto;
+      padding:5px 0;
+      list-style:none;
+      font-size:@h4-font-size;
+      text-transform:uppercase;
+
+      li{
+        display:inline-block;
+        margin:0 10px 0 0;
+
+        a{
+          color:#fff;
+
+          &:hover{
+            color:@secondary-color;
+          }
+        }
+
+        &.selected a{
+            color:@secondary-color;
+        }
+      }
+    }
+  }
 }
 
 #content{
