@@ -15,14 +15,14 @@ header(role='banner')#site-header
           - var href = (lang !== 'en' ? lang + '/' : '') + page.slug
           - var path = lang !== 'en' ? current.path[1] : current.path[0]
           if path === page.slug
-            li.selected: a(href='#{baseUrl}/#{href}/', title='#{page.title}')= page.title
+            li.selected: a(href='#{baseUrl}/#{href}', title='#{page.title}')= page.title
           else
-            li: a(href='#{baseUrl}/#{href}/', title='#{page.title}')= page.title
+            li: a(href='#{baseUrl}/#{href}', title='#{page.title}')= page.title
         li(class='#{enClassName}'): a(href='#{baseUrl}/', title='English') EN
         li(class='#{zhClassName}'): a(href='#{baseUrl}/zh/', title='中') 中
     
     #logo
-      a(href='#{logoUrl}/', title='AT Asset Management - Home', class='#{logo}') AT Asset Management
+      a(href='#{logoUrl}', title='AT Asset Management - Home', class='#{logo}') AT Asset Management
 
     a.menu-button(href='#main-navigation', title='Toggle menu')
       span Toggle menu
@@ -36,9 +36,9 @@ header(role='banner')#site-header
       .sub-navigation
         ul
           - each child in page.children       
-            - var href = (lang !== 'en' ? lang + '/' : '') + page.slug + '/' + child.slug
+            - var href = (child.slug.charAt(0) === '#' ? child.slug : baseUrl + '/' + (lang !== 'en' ? lang + '/' : '') + page.slug + '/' + child.slug)
             - var path = lang !== 'en' ? current.path[2] : current.path[1]
             if path === child.slug
-              li.selected: a(href='#{baseUrl}/#{href}/', title='#{child.title}')= child.title
+              li.selected: a(href='#{href}', title='#{child.title}')= child.title
             else
-              li: a(href='#{baseUrl}/#{href}/', title='#{child.title}')= child.title
+              li: a(href='#{href}', title='#{child.title}')= child.title

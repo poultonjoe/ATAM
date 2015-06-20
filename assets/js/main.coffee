@@ -3,8 +3,10 @@ ATAM = ATAM ||
     $window = $(window)
     $html = $('html')
     $menu = $('.menu-button')
-    $header = $('.home #site-header')
-    $intro = $('h1', $header)
+    $header = $('#site-header')
+    $homeHeader = $('.home #site-header')
+    $subnav = $('.sub-navigation a[href^="#"]')
+    $intro = $('h1', $homeHeader)
     $scrollDown = $('#skip-to-content')
     $scrollUp = $('#skip-to-navigation')
     $content = $('#content')
@@ -13,8 +15,8 @@ ATAM = ATAM ||
     IMG_H = 946
     IMG_W = 1600
     hero = ->
-      if $header.length
-        $header.css
+      if $homeHeader.length
+        $homeHeader.css
           height: Math.ceil IMG_H / IMG_W * $window.width()
     scrollUpPosition = ->
       if $window.width() >= 1160
@@ -23,7 +25,7 @@ ATAM = ATAM ||
     scrollUpOpacity = ->
       if $window.width() >= 1160
         scroll = $window.scrollTop()
-        offset = $header.outerHeight()
+        offset = $homeHeader.outerHeight()
         opacity = 0
         fadeStartPos = if $html.hasClass 'home' then 146 else offset
         fadeEndPos = if $html.hasClass 'home' then offset else fadeStartPos + 146
@@ -43,6 +45,12 @@ ATAM = ATAM ||
       e.preventDefault()
       $html.toggleClass 'menu-visible'
       $intro.fadeToggle 250
+
+    $subnav.on 'click', (e) ->
+      e.preventDefault()
+      $('html,body').animate
+        scrollTop: $(e.target.hash).offset().top - $header.outerHeight() - 36
+      , 250
 
     $scrollDown.on 'click', (e) ->
       e.preventDefault()
