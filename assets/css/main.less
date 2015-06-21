@@ -463,8 +463,31 @@ body{
 
     section{
       &.introduction{
-        @media @small-query{
-          text-align:center;
+        .clearfix;
+
+        .intro-image-wrap{
+          margin-bottom:1em;
+
+          @media @small-query{
+            float:left;
+            height:0;
+            width:35%;
+            margin:0 7% 0 0;
+            padding-bottom:18%;
+            overflow:hidden;
+          }
+
+          img{
+            max-width:100%;
+            height:auto;
+          }
+        }
+
+        > p{
+          @media @small-query{
+            float:left;
+            width:58%;
+          }
         }
       }
       &.philosophy{
@@ -484,53 +507,6 @@ body{
           clear:left;
           text-align:center;
           width:auto%;
-        }
-      }
-      &.management-team{
-        .team-member{
-          margin-bottom:@small-margin;
-
-          .profile{
-            text-align:center;
-            margin:0 0 1em;
-
-            img{
-              width:auto;
-              height:100%;
-
-              @media @small-query{
-                height:90px;
-              }
-            }
-
-            .name{
-              display:block;
-              font-weight:400;
-            }
-            .role{
-              font-weight:300;
-            }
-          }
-        }
-
-        @media @small-query{
-          .team-member{
-            display:table;
-
-            .profile,
-            .info{
-              display:table-cell;
-              vertical-align:top;
-            }
-
-            .profile{
-              width:20%;
-              text-align:left;
-            }
-            .info{
-              width:80%;
-            }
-          }
         }
       }
     }
@@ -570,7 +546,7 @@ body{
       &:after{
         display:inline-block;
         font-size:2em;
-        color:@secondary-color;
+        color:@default-color;
         line-height:0.5;
         position:relative;
         top:0.25em;
@@ -764,13 +740,18 @@ body{
   }
 
   .office-image{
-    position:absolute;
-    bottom:50px;
-    right:38px;
-    height:200px;
-    width:auto;
-    border:3px solid #fff;
-    z-index:100;
+    display:none;
+
+    @media @small-query{
+      display:block;
+      position:absolute;
+      bottom:50px;
+      right:38px;
+      height:200px;
+      width:auto;
+      border:3px solid #fff;
+      z-index:100;
+    }
   }
 
   address{
