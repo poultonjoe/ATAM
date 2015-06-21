@@ -669,122 +669,67 @@ body{
 
     section{
       &.introduction{
-        @media @small-query{
-          text-align:center;
-        }
-      }
-      &.philosophy{
-        @media @small-query{
+        .clearfix;
+
+        .image-wrap{
           float:left;
-          width:45%;
+          background:#ccc;
+          position:relative;
+
+          &:nth-child(3n + 1){
+            background:#ddd;
+          }
+          &:nth-child(3n + 2){
+            background:#eee;
+          }
+
+          &.image-wrap-large{
+            width:75%;
+            height:0;
+            padding-bottom:50%;
+          }
+
+          &.image-wrap-small{
+            width:25%;
+            height:0;
+            padding-bottom:25%;
+          }
+
+          .image-link{
+            height:100%;
+            width:100%;
+            position:absolute;
+          }
+
+          .name{
+            position:absolute;
+            bottom:0;
+            right:0;
+          }
         }
       }
-      &.principles{
-        @media @small-query{
-          float:right;
-          width:45%;
-        }
-      }
+
       &.management-team{
         .team-member{
           margin-bottom:@small-margin;
 
           .profile{
-            text-align:center;
+            text-transform:uppercase;
             margin:0 0 1em;
 
-            img{
-              width:auto;
-              height:100%;
-
-              @media @small-query{
-                height:90px;
-              }
-            }
-
             .name{
+              &:extend(.h2);
               display:block;
               font-weight:400;
+              margin-bottom:0;
             }
             .role{
-              font-weight:300;
+              &:extend(.h3);
+              font-weight:400;
+              margin-bottom:0;
             }
           }
         }
-
-        @media @small-query{
-          .team-member{
-            display:table;
-
-            .profile,
-            .info{
-              display:table-cell;
-              vertical-align:top;
-            }
-
-            .profile{
-              width:20%;
-              text-align:left;
-            }
-            .info{
-              width:80%;
-            }
-          }
-        }
-      }
-    }
-
-    blockquote{
-      clear:both;
-      .clearfix;
-      font-style:italic;
-      font-size:1.25rem;
-      letter-spacing:5px;
-      border:0;
-      position:relative;
-      padding:0 @large-padding 3em * 0.7;
-
-      cite{
-        color:@default-color;
-        letter-spacing:0;
-        text-align:right;
-        position:absolute;
-        bottom:0;
-        right:@small-padding;
-
-        strong{
-          display:block;
-        }
-
-        &:before{
-          content:none;
-        }        
-
-        @media @small-query{
-          right:15%;
-        }
-      }
-
-      &:before,
-      &:after{
-        display:inline-block;
-        font-size:2em;
-        color:@secondary-color;
-        line-height:0.5;
-        position:relative;
-        top:0.25em;
-      }
-
-      &:before{
-        content:'\201C';
-        margin-left:-.75em;
-      }
-      &:after{
-        content:'\201D';
-      }
-
-      @media @small-query{
-        padding:0 14% 3em * 0.7;
       }
     }
   }

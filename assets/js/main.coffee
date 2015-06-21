@@ -5,7 +5,7 @@ ATAM = ATAM ||
     $menu = $('.menu-button')
     $header = $('#site-header')
     $homeHeader = $('.home #site-header')
-    $subnav = $('.sub-navigation a[href^="#"]')
+    $anchors = $('.sub-navigation a[href^="#"], .introduction a[href^="#"]')
     $intro = $('h1', $homeHeader)
     $scrollDown = $('#skip-to-content')
     $scrollUp = $('#skip-to-navigation')
@@ -46,7 +46,7 @@ ATAM = ATAM ||
       $html.toggleClass 'menu-visible'
       $intro.fadeToggle 250
 
-    $subnav.on 'click', (e) ->
+    $anchors.on 'click', (e) ->
       e.preventDefault()
       $('html,body').animate
         scrollTop: $(e.target.hash).offset().top - $header.outerHeight() - 36
