@@ -741,11 +741,14 @@ body{
 
 .our-fund{
   #content{
-    section{
-      &.introduction{
-        @media @small-query{
-          text-align:center;
-        }
+    h1,
+    h2{
+      .title;
+    }
+
+    .introduction{
+      @media @small-query{
+        text-align:center;
       }
     }
   }
