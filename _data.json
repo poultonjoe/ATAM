@@ -2,7 +2,7 @@
   "navigation": [
     {
       "slug": "our-company",
-      "title": "Our company"
+      "title": "Our Company"
     },
     {
       "slug": "services",
@@ -10,17 +10,17 @@
       "children": [
         {
           "slug": "fund-management",
-          "title": "Fund management"
+          "title": "Fund Management"
         },
         {
           "slug": "tailored-solutions",
-          "title": "Tailored solutions"
+          "title": "Tailored Solutions"
         }
       ]
     },
     {
       "slug": "our-team",
-      "title": "Our team",
+      "title": "Our Team",
       "children": [
         {
           "slug": "#andy-lim",
@@ -54,7 +54,7 @@
     },
     {
       "slug": "our-fund",
-      "title": "Our fund"
+      "title": "Our Fund"
     },
     {
       "slug": "contact",
