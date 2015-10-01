@@ -35,9 +35,9 @@ body{
 
 .title(){
   font-size:@h2-font-size;
-  text-transform:uppercase;
+  text-transform:capitalize;
   letter-spacing:2px;
-  text-align:center;
+  text-align:left;
   margin-top:0;
 }
 
@@ -58,7 +58,7 @@ body{
   font-family:@header-font-family;
   padding:@small-padding;
   .fadein;
-  background:@main-color url(../img/header.jpg) center 0 no-repeat;
+  background:#095295;
   background-size:cover;
 
   #logo{
@@ -433,6 +433,8 @@ body{
 
     h1{
       .title;
+      text-transform:uppercase;
+      text-align:center;
       color:#fff;
       position:absolute;
       top:30%;
@@ -455,57 +457,52 @@ body{
 // ==========================================================================
 
 .our-company{
+  
+  .main-image{
+  min-height:360px;
+  background-image:url(../img/team.jpg);
+  background-size:auto 100%;
+  width:100%;
+  background-repeat:no-repeat;
+  position:relative;
+  user-select:none;
+}
+
   #content{
     h1,
     h2{
       .title;
-    }
+     }
 
     section{
       &.introduction{
         .clearfix;
-
-        .intro-image-wrap{
-          margin-bottom:1em;
-
-          @media @small-query{
-            float:left;
-            height:0;
-            width:35%;
-            margin:0 7% 0 0;
-            padding-bottom:18%;
-            overflow:hidden;
-          }
-
-          img{
-            max-width:100%;
-            height:auto;
-          }
+        text-align:left;
+        float:left;
+        width:100%;
+        @media @small-query{
+        width:100%;
         }
 
-        > p{
-          @media @small-query{
-            float:left;
-            width:58%;
-          }
-        }
+   
       }
       &.philosophy{
         @media @small-query{
           float:left;
-          width:45%;
+          width:100%;
         }
       }
       &.principles{
         @media @small-query{
-          float:right;
-          width:45%;
+          clear:left;
+          float:left;
+          width:100%;
         }
        }
       &.investment-philosophy{
         @media @small-query{
           clear:left;
-          text-align:center;
+          text-align:left;
           width:auto%;
         }
       }
@@ -572,6 +569,14 @@ body{
 // ==========================================================================
 
 .services{
+
+#site-header{
+    min-height:360px;
+    background-image:url(../img/team.jpg);
+    background-width:auto 100%;
+    position:relative;
+    }
+
   #content{
     h1,
     h2{
@@ -650,13 +655,24 @@ body{
         .image-wrap{
           float:left;
           background:#ccc;
+          background-position:0 ;
+          background-repeat:no-repeat;
+          background-size:cover;
           position:relative;
 
           &:nth-child(3n + 1){
             background:#ddd;
+            background-position:0 ;
+            background-repeat:no-repeat;
+            background-size:cover;
+            position:relative;
           }
           &:nth-child(3n + 2){
             background:#eee;
+            background-position:0 ;
+            background-repeat:no-repeat;
+            background-size:cover;
+            position:relative;
           }
 
           &.image-wrap-large{
@@ -679,8 +695,31 @@ body{
 
           .name{
             position:absolute;
-            bottom:0;
-            right:0;
+            color:#fff;
+            text-align:right;
+            bottom:15px;
+            right:20px;
+          }
+          &.andylim{
+          background-image:url('../img/andy.jpg');
+          }
+          &.teresatay{
+          background-image:url('../img/teresa.jpg');
+          }
+          &.ryanyang{
+          background-image:url('../img/ryan.jpg');
+          }
+          &.cheahcheemun{
+          background-image:url('../img/cheemun.jpg');
+          }
+          &.joepoulton{
+          background-image:url('../img/joe.jpg');
+          }
+          &.juliesim{
+          background-image:url('../img/julie.jpg');
+          }
+          &.gerlynloh{
+          background-image:url('../img/gerlyn.jpg');
           }
         }
       }
@@ -690,7 +729,7 @@ body{
           margin-bottom:@small-margin;
 
           .profile{
-            text-transform:uppercase;
+            text-transform:capitalize;
             margin:0 0 1em;
 
             .name{
