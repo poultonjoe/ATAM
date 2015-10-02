@@ -2,55 +2,38 @@
   "navigation": [
     {
       "slug": "our-company",
-      "title": "Our Company"
+      "title": "Our Company",
+      "children": [
+        {
+          "slug": "#philosophy",
+          "title": "Our Philosophy"
+        },
+        {
+          "slug": "#principles",
+          "title": "Our Principles"
+        }
+      ]
+
     },
     {
       "slug": "services",
       "title": "Services",
-      "children": [
-        {
-          "slug": "fund-management",
-          "title": "Fund Management"
-        },
-        {
-          "slug": "tailored-solutions",
-          "title": "Tailored Solutions"
-        }
-      ]
+      "children": []
     },
     {
       "slug": "our-team",
       "title": "Our Team",
-      "children": [
-        {
-          "slug": "#andy-lim",
-          "title": "Andy Lim"
-        },
-        {
-          "slug": "#teresa-tay",
-          "title": "Teresa Tay"
-        },
-        {
-          "slug": "#ryan-yang",
-          "title": "Ryan Yang"
-        },
-        {
-          "slug": "#cheah-chee-mun",
-          "title": "Cheah Chee Mun"
-        },
-        {
-          "slug": "#joe-poulton",
-          "title": "Joe Poulton"
-        }
-      ]
+      "children": []
     },
     {
       "slug": "our-fund",
-      "title": "Our Fund"
+      "title": "Our Fund",
+      "children": []
     },
     {
       "slug": "contact",
-      "title": "Contact"
+      "title": "Contact",
+      "children": []
     }
   ],
   "footer_navigation": [

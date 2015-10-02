@@ -253,6 +253,9 @@ body{
 
   .sub-navigation{
     background:@default-color;
+    -webkit-box-shadow: 0px 5px 50px 5px rgba(0, 0, 0, 1);
+      -moz-box-shadow: 0px 5px 50px 5px rgba(0, 0, 0, 1);
+      box-shadow: 0px 5px 50px 5px rgba(0, 0, 0, 1);
     margin:@small-padding -@small-padding -@small-padding;
     padding:0 @small-padding;
 
@@ -457,21 +460,18 @@ body{
 // ==========================================================================
 
 .our-company{
-  
-  .main-image{
-  min-height:360px;
-  background-image:url(../img/team.jpg);
-  background-size:auto 100%;
-  width:100%;
-  background-repeat:no-repeat;
-  position:relative;
-  user-select:none;
-}
 
+#main-image-wrapper{
+    position:relative;
+    background-image:url(../img/office.jpg);
+  }
+  
   #content{
     h1,
     h2{
       .title;
+      float:left;
+      width:30%;
      }
 
     section{
@@ -481,29 +481,54 @@ body{
         float:left;
         width:100%;
         @media @small-query{
-        width:100%;
+        float:right;
+        width:65%;
+        text-align:left;
         }
 
+    h1,
+    h2{
+      .title;
+      float:left;
+      width:30%;
+     }
    
       }
       &.philosophy{
         @media @small-query{
-          float:left;
-          width:100%;
+          text-align:left;
+          float:right;
+          width:65%;
         }
+
+     h1,
+     h2{
+      .title;
+      float:left;
+      width:30%;
+     }
+
       }
       &.principles{
         @media @small-query{
-          clear:left;
-          float:left;
-          width:100%;
+          text-align:left;
+          float:right;
+          width:65%;
         }
+
+      h1,
+      h2{
+      .title;
+      float:left;
+      width:30%;
+     }
+
        }
       &.investment-philosophy{
         @media @small-query{
-          clear:left;
           text-align:left;
-          width:auto%;
+          float:right;
+          width:65%;
         }
       }
     }
@@ -570,23 +595,25 @@ body{
 
 .services{
 
-#site-header{
-    min-height:360px;
-    background-image:url(../img/team.jpg);
-    background-width:auto 100%;
+#main-image-wrapper{
     position:relative;
-    }
+    background-image:url(../img/team.jpg);
+  }
 
   #content{
     h1,
     h2{
       .title;
+      float:left;
+      width:30%;
     }
 
     section{
       &.introduction{
         @media @small-query{
-          text-align:center;
+          float:right;
+          width:65%;
+          text-align:left;
         }
       }
       &.investment-philosophy{
@@ -642,10 +669,17 @@ body{
 // ==========================================================================
 
 .our-team{
+
+#main-image-wrapper{
+    position:relative;
+    background-image:url(../img/team.jpg);
+  }
   #content{
     h1,
     h2{
       .title;
+      float:left;
+      width:30%;
     }
 
     section{
@@ -755,15 +789,25 @@ body{
 // ==========================================================================
 
 .our-fund{
+
+  #main-image-wrapper{
+    position:relative;
+    background-image:url(../img/iStock_000019260524_Medium.jpg);
+  }
+
   #content{
     h1,
     h2{
       .title;
+      float:left;
+      width:30%;
     }
 
     .introduction{
       @media @small-query{
-        text-align:center;
+        float:right;
+        width:65%;
+        text-align:left;
       }
     }
   }
@@ -820,6 +864,22 @@ body{
           color:@default-color;
           text-decoration:none;
         }
+      }
+    }
+  }
+  #content{
+    h1,
+    h2{
+      .title;
+      float:left;
+      width:30%;
+    }
+
+    .introduction{
+      @media @small-query{
+        float:right;
+        width:65%;
+        text-align:left;
       }
     }
   }
