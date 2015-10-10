@@ -4,21 +4,9 @@
       "slug": "our-company",
       "title": "Our Company",
       "children": [
-        {
-          "slug": "#philosophy",
-          "title": "Our Philosophy"
-        },
-        {
-          "slug": "#principles",
-          "title": "Our Principles"
-        }
+      
       ]
 
-    },
-    {
-      "slug": "services",
-      "title": "Services",
-      "children": []
     },
     {
       "slug": "our-team",

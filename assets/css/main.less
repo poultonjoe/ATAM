@@ -431,7 +431,7 @@ body{
   #site-header{
     min-height:360px;
     background-image:url(../img/hero.jpg);
-    background-size:auto 100%;
+    background-size:cover;
     position:relative;
 
     h1{
@@ -463,7 +463,7 @@ body{
 
 #main-image-wrapper{
     position:relative;
-    background-image:url(../img/office.jpg);
+    background-image:url(../img/office_logo.jpg);
   }
   
   #content{
@@ -478,7 +478,7 @@ body{
       &.introduction{
         .clearfix;
         text-align:left;
-        float:left;
+        float:right;
         width:100%;
         @media @small-query{
         float:right;
@@ -490,15 +490,19 @@ body{
     h2{
       .title;
       float:left;
-      width:30%;
+      width:25%;
      }
    
       }
       &.philosophy{
+        .clearfix;
+        text-align:left;
+        float:right;
+        width:100%;
         @media @small-query{
-          text-align:left;
-          float:right;
-          width:65%;
+        float:right;
+        width:65%;
+        text-align:left;
         }
 
      h1,
@@ -510,10 +514,14 @@ body{
 
       }
       &.principles{
+        .clearfix;
+        text-align:left;
+        float:right;
+        width:100%;
         @media @small-query{
-          text-align:left;
-          float:right;
-          width:65%;
+        float:right;
+        width:65%;
+        text-align:left;
         }
 
       h1,
@@ -597,7 +605,7 @@ body{
 
 #main-image-wrapper{
     position:relative;
-    background-image:url(../img/team.jpg);
+    background-image:url(../img/World-Map-On-Hands.jpg);
   }
 
   #content{
@@ -609,11 +617,15 @@ body{
     }
 
     section{
-      &.introduction{
+       &.introduction{
+        .clearfix;
+        text-align:left;
+        float:right;
+        width:100%;
         @media @small-query{
-          float:right;
-          width:65%;
-          text-align:left;
+        float:right;
+        width:65%;
+        text-align:left;
         }
       }
       &.investment-philosophy{
@@ -671,9 +683,13 @@ body{
 .our-team{
 
 #main-image-wrapper{
-    position:relative;
+    min-height:50vh;
     background-image:url(../img/team.jpg);
-  }
+    background-size:cover;
+    position:relative;
+    }
+
+
   #content{
     h1,
     h2{
@@ -730,6 +746,7 @@ body{
           .name{
             position:absolute;
             color:#fff;
+            background:@default-color;
             text-align:right;
             bottom:15px;
             right:20px;
@@ -801,13 +818,19 @@ body{
       .title;
       float:left;
       width:30%;
-    }
+     }
 
-    .introduction{
-      @media @small-query{
+    section{
+      &.introduction{
+        .clearfix;
+        text-align:left;
+        float:right;
+        width:100%;
+        @media @small-query{
         float:right;
         width:65%;
         text-align:left;
+        }
       }
     }
   }
@@ -875,11 +898,17 @@ body{
       width:30%;
     }
 
-    .introduction{
-      @media @small-query{
-        float:right;
-        width:65%;
+    section{
+       &.introduction{
+        .clearfix;
         text-align:left;
+        float:right;
+        width:100%;
+        @media @small-query{
+        float:right;
+        width:66%;
+        text-align:left;
+        }
       }
     }
   }
