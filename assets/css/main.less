@@ -436,7 +436,7 @@ body{
 
     h1{
       .title;
-      text-transform:uppercase;
+      text-transform:none;
       text-align:center;
       color:#fff;
       position:absolute;
@@ -680,6 +680,17 @@ body{
 // Our Team
 // ==========================================================================
 
+section{
+       &.caption{
+        width:40%;
+        top:50%;
+        right:5%;
+        text-align:left;
+        position:fixed;
+        color:#fff;
+        }
+    }
+
 .our-team{
 
 #main-image-wrapper{
@@ -688,6 +699,8 @@ body{
     background-size:cover;
     position:relative;
     }
+
+
 
 
   #content{
@@ -700,101 +713,14 @@ body{
 
     section{
       &.introduction{
-        .clearfix;
-
-        .image-wrap{
-          float:left;
-          background:#ccc;
-          background-position:0 ;
-          background-repeat:no-repeat;
-          background-size:cover;
-          position:relative;
-
-          &:nth-child(3n + 1){
-            background:#ddd;
-            background-position:0 ;
-            background-repeat:no-repeat;
-            background-size:cover;
-            position:relative;
-          }
-          &:nth-child(3n + 2){
-            background:#eee;
-            background-position:0 ;
-            background-repeat:no-repeat;
-            background-size:cover;
-            position:relative;
-          }
-
-          &.image-wrap-large{
-            width:75%;
-            height:0;
-            padding-bottom:50%;
-          }
-
-          &.image-wrap-small{
-            width:25%;
-            height:0;
-            padding-bottom:25%;
-          }
-
-          .image-link{
-            height:100%;
-            width:100%;
-            position:absolute;
-          }
-
-          .name{
-            position:absolute;
-            color:#fff;
-            background:@default-color;
-            text-align:right;
-            bottom:15px;
-            right:20px;
-          }
-          &.andylim{
-          background-image:url('../img/andy.jpg');
-          }
-          &.teresatay{
-          background-image:url('../img/teresa.jpg');
-          }
-          &.ryanyang{
-          background-image:url('../img/ryan.jpg');
-          }
-          &.cheahcheemun{
-          background-image:url('../img/cheemun.jpg');
-          }
-          &.joepoulton{
-          background-image:url('../img/joe.jpg');
-          }
-          &.juliesim{
-          background-image:url('../img/julie.jpg');
-          }
-          &.gerlynloh{
-          background-image:url('../img/gerlyn.jpg');
-          }
-        }
-      }
-
-      &.management-team{
-        .team-member{
-          margin-bottom:@small-margin;
-
-          .profile{
-            text-transform:capitalize;
-            margin:0 0 1em;
-
-            .name{
-              &:extend(.h2);
-              display:block;
-              font-weight:400;
-              margin-bottom:0;
-            }
-            .role{
-              &:extend(.h3);
-              font-weight:400;
-              margin-bottom:0;
-            }
-          }
+      .clearfix;
+        text-align:left;
+        float:right;
+        width:100%;
+        @media @small-query{
+        float:right;
+        width:65%;
+        text-align:left;
         }
       }
     }
