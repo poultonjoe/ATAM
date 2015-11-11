@@ -2,19 +2,39 @@
   "navigation": [
     {
       "slug": "guan-yu-wo-men",
-      "title": "关于我们"
+      "title": "关于我们",
+      "children": [
+      
+      ]
+
     },
     {
-      "slug": "wo-men-de-fu-wu",
-      "title": "我们的服务"
+      "slug": "wo-men-de-tou-zi-yuan-ze",
+      "title": "我们的投资原则",
+      "children": [
+      
+      ]
     },
     {
-      "slug": "tou-zi-biao-xian",
-      "title": "投资表现"
+      "slug": "gong-si-tuan-dui",
+      "title": "公司团队",
+      "children": [
+      
+      ]
+    },
+    {
+      "slug": "ji-jing",
+      "title": "基金",
+      "children": [
+      
+      ]
     },
     {
       "slug": "yu-wo-men-lian-xi",
-      "title": "与我们联系"
+      "title": "与我们联系",
+      "children": [
+      
+      ]
     }
   ],
   "footer_navigation": [

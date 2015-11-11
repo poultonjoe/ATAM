@@ -471,7 +471,148 @@ body{
     h2{
       .title;
       float:left;
+
+     }
+
+    section{
+      &.introduction{
+        .clearfix;
+        text-align:left;
+        float:right;
+        width:100%;
+        @media @small-query{
+        float:right;
+        width:65%;
+        text-align:left;
+        }
+
+    h1,
+    h2{
+      .title;
+      float:left;
       width:30%;
+     }
+   
+      }
+      &.philosophy{
+        .clearfix;
+        text-align:left;
+        float:right;
+        width:100%;
+        @media @small-query{
+        float:right;
+        width:65%;
+        text-align:left;
+        }
+
+     h1,
+     h2{
+      .title;
+      float:left;
+      width:30%;
+     }
+
+      }
+      &.principles{
+        .clearfix;
+        text-align:left;
+        float:right;
+        width:100%;
+        @media @small-query{
+        float:right;
+        width:65%;
+        text-align:left;
+        }
+
+      h1,
+      h2{
+      .title;
+      float:left;
+      width:30%;
+     }
+
+       }
+      &.investment-philosophy{
+        @media @small-query{
+          text-align:left;
+          float:right;
+          width:65%;
+        }
+      }
+    }
+
+    blockquote{
+      clear:both;
+      .clearfix;
+      font-style:italic;
+      font-size:1.25rem;
+      letter-spacing:5px;
+      border:0;
+      position:relative;
+      padding:0 @large-padding 3em * 0.7;
+
+      cite{
+        color:@default-color;
+        letter-spacing:0;
+        text-align:right;
+        position:absolute;
+        bottom:0;
+        right:@small-padding;
+
+        strong{
+          display:block;
+        }
+
+        &:before{
+          content:none;
+        }        
+
+        @media @small-query{
+          right:15%;
+        }
+      }
+
+      &:before,
+      &:after{
+        display:inline-block;
+        font-size:2em;
+        color:@default-color;
+        line-height:0.5;
+        position:relative;
+        top:0.25em;
+      }
+
+      &:before{
+        content:'\201C';
+        margin-left:-.75em;
+      }
+      &:after{
+        content:'\201D';
+      }
+
+      @media @small-query{
+        padding:0 14% 3em * 0.7;
+      }
+    }
+  }
+}
+
+// ==========================================================================
+// Our Principles
+// ==========================================================================
+
+.our-principles{
+
+#main-image-wrapper{
+    position:relative;
+    background-image:url(../img/principles.jpg);
+  }
+  
+  #content{
+    h1,
+    h2{
+      .title;
+      float:left;
      }
 
     section{
@@ -613,7 +754,6 @@ body{
     h2{
       .title;
       float:left;
-      width:30%;
     }
 
     section{
@@ -686,7 +826,7 @@ section{
         top:50%;
         right:5%;
         text-align:left;
-        position:fixed;
+        position:absolute;
         color:#fff;
         }
     }
@@ -696,7 +836,7 @@ section{
 #main-image-wrapper{
     min-height:50vh;
     background-image:url(../img/team.jpg);
-    background-size:cover;
+    background-size: cover;
     position:relative;
     }
 
@@ -708,7 +848,6 @@ section{
     h2{
       .title;
       float:left;
-      width:30%;
     }
 
     section{
@@ -743,7 +882,6 @@ section{
     h2{
       .title;
       float:left;
-      width:30%;
      }
 
     section{
@@ -821,7 +959,6 @@ section{
     h2{
       .title;
       float:left;
-      width:30%;
     }
 
     section{

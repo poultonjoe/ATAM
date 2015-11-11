@@ -1,0 +1,16 @@
+extend ../_partials/layout
+
+block header
+  != partial('../_partials/header')
+             
+block pre-content
+  #main-image-wrapper(style='width:100%; height:50vh;background-size:cover;background-repeat:no-repeat;')
+    
+
+block content
+  != yield
+
+block footer
+  != partial('../_partials/footer')
+
+

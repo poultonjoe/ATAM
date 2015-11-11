@@ -1,0 +1,72 @@
+- var lang = current.path[0] === 'zh' ? 'zh' : 'en';
+- var isHome = current.path[0] === 'index' || lang === 'zh' && current.path[1] === 'index';
+- var getClassname = function() {
+-   if (isHome) return 'home';
+-   if (lang === 'en') return current.path[0];
+-   var currentPage = public[lang][current.path[1]];
+-   return currentPage && currentPage._data && currentPage._data.index.classname || '';
+- };
+- var langPath = lang === 'zh' ? '/zh' : '';
+- var baseUrl = github_pages ? (environment === 'development' ? '' : '/ATAM') : '';
+- var slug = lang === 'zh' ? current.path[1] : current.path[0];
+- var pageName = lang !== 'zh' ? public._data.navigation[slug] : public.zh._data.navigation[slug]
+
+doctype
+html(lang='#{lang}', class='#{getClassname()}')
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0, maximum-scale=1.0')
+    title= isHome ? site_title : site_title + ' - ' + pageName
+    link(rel='shortcut icon', href='#{baseUrl}/assets/img/favicon.ico')
+    link(rel="stylesheet", href="#{baseUrl}/assets/css/main.css")
+  body
+    != partial('/_partials/header')
+    block header
+
+    block pre-content
+
+    main#content(role='main')
+      block content
+
+    != partial('/_partials/footer')
+    block footer
+
+    a(href='#header', title='Skip to navigation', id='skip-to-navigation') Skip to navigation
+    #overlay
+    #modal
+      .content
+      button#accept-terms
+        | I agree
+    script.
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', '#{google_analytics.id}', '#{google_analytics.profile}');
+      ga('send', 'pageview');
+    script.
+      WebFontConfig = {
+        google: { families: [ 'Source+Sans+Pro:300,400,300italic,400italic:latin' ] }
+      };
+      (function() {
+        var wf = document.createElement('script');
+        wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+          '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+        wf.type = 'text/javascript';
+        wf.async = 'true';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(wf, s);
+      })();
+    script(type='text/javascript', src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js')
+    script(type='text/javascript', src='//cdnjs.cloudflare.com/ajax/libs/Cookies.js/0.4.0/cookies.min.js')
+    script(type='text/javascript', src='#{baseUrl}/assets/js/main.js')
+    script.
+      $(function(){
+        var options = {
+          disclaimer: '#{baseUrl}#{langPath}/#{translations.disclaimer_slug[lang]}/'
+        };
+
+        ATAM.init(options);
+      });
+    block scripts

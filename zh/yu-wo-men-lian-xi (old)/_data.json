@@ -1,0 +1,6 @@
+{
+  "index": {
+    "layout": "../../contact/_contact-layout.jade",
+    "classname": "contact"
+  }
+}

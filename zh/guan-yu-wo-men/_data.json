@@ -1,5 +1,6 @@
 {
   "index": {
+    "layout": "../../our-company/_contact-layout.jade",
     "classname": "our-company"
   }
 }
