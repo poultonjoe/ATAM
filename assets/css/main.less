@@ -462,9 +462,18 @@ body{
 .our-company{
 
 #main-image-wrapper{
-    position:relative;
+    min-height:30vh;
     background-image:url(../img/office_logo.jpg);
-  }
+    background-size: cover;
+    position:relative;
+    @media @small-query{
+    min-height:55vh;
+    background-image:url(../img/office_logo.jpg);
+    background-size: cover;
+    position:relative;
+    }
+    }
+
   
   #content{
     h1,
@@ -604,9 +613,17 @@ body{
 .our-principles{
 
 #main-image-wrapper{
-    position:relative;
+    min-height:30vh;
     background-image:url(../img/principles.jpg);
-  }
+    background-size: cover;
+    position:relative;
+    @media @small-query{
+    min-height:55vh;
+    background-image:url(../img/principles.jpg);
+    background-size: cover;
+    position:relative;
+    }
+    }
   
   #content{
     h1,
@@ -823,21 +840,35 @@ body{
 section{
        &.caption{
         width:40%;
-        top:50%;
+        top:28%;
         right:5%;
         text-align:left;
         position:absolute;
         color:#fff;
+        @media @small-query{
+        width:40%;
+        top:55%;
+        right:5%;
+        text-align:left;
+        position:absolute;
+        color:#fff;
+        }
         }
     }
 
 .our-team{
 
 #main-image-wrapper{
-    min-height:50vh;
+    min-height:30vh;
+    background-image:url(../img/teamsmall.jpg);
+    background-size: cover;
+    position:relative;
+    @media @small-query{
+    min-height:55vh;
     background-image:url(../img/team.jpg);
     background-size: cover;
     position:relative;
+    }
     }
 
 
@@ -873,9 +904,17 @@ section{
 .our-fund{
 
   #main-image-wrapper{
-    position:relative;
+    min-height:30vh;
     background-image:url(../img/iStock_000019260524_Medium.jpg);
-  }
+    background-size: cover;
+    position:relative;
+    @media @small-query{
+    min-height:55vh;
+    background-image:url(../img/iStock_000019260524_Medium.jpg);
+    background-size: cover;
+    position:relative;
+    }
+    }
 
   #content{
     h1,
