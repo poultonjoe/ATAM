@@ -941,6 +941,48 @@ section{
 }
 
 // ==========================================================================
+// Careers
+// ==========================================================================
+
+.careers{
+
+  #main-image-wrapper{
+    min-height:30vh;
+    background-image:url(../img/building-texture.jpg);
+    background-size: cover;
+    position:relative;
+    @media @small-query{
+    min-height:55vh;
+    background-image:url(../img/building-texture.jpg);
+    background-size: cover;
+    position:relative;
+    }
+    }
+
+  #content{
+    h1,
+    h2{
+      .title;
+      float:left;
+     }
+
+    section{
+      &.introduction{
+        .clearfix;
+        text-align:left;
+        float:right;
+        width:100%;
+        @media @small-query{
+        float:right;
+        width:65%;
+        text-align:left;
+        }
+      }
+    }
+  }
+}
+
+// ==========================================================================
 // Contact
 // ==========================================================================
 
